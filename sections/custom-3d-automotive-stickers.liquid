@@ -5,6 +5,14 @@
   - Line item property data storage
 {% endcomment %}
 
+{%- assign product = all_products[section.settings.product] -%}
+{%- if product == empty -%}
+  {%- assign product = all_products['3d-car-hanging'] -%}
+{%- endif -%}
+{%- if product == empty -%}
+  {%- assign product = all_products['3d-automatice-stickers'] -%}
+{%- endif -%}
+
 <div class="custom-automotive-stickers">
   <div class="container">
     <div class="row">
@@ -32,7 +40,8 @@
         {% endif %}
 
         <!-- Product Form -->
-        <form method="post" action="/cart/add" id="product-form" class="product-form">
+        <form id="product-form" action="/cart/add" method="post" enctype="multipart/form-data" class="product-form">
+          <input type="hidden" name="id" id="hidden-variant-id" value="{{ product.selected_or_first_available_variant.id }}">
           
           <!-- Variant Selection -->
           {% if product.available %}
@@ -40,11 +49,10 @@
               <label for="variant-selector" class="form-label">Select Sticker Variant:</label>
               <select 
                 id="variant-selector" 
-                name="id" 
                 class="form-select variant-select"
               >
                 {% for variant in product.variants %}
-                  <option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected{% endif %}>
+                  <option value="{{ variant.id }}" data-price="{{ variant.price | money }}" {% if variant == product.selected_or_first_available_variant %}selected{% endif %}>
                     {{ variant.title }} - {{ variant.price | money }}
                   </option>
                 {% endfor %}
@@ -312,11 +320,76 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // Update price when variant changes
+    console.log("Custom page JS loaded");
+
     const variantSelect = document.getElementById('variant-selector');
-    if (variantSelect) {
+    const hiddenVariantIdInput = document.getElementById('hidden-variant-id');
+    const priceDisplay = document.getElementById('product-price');
+    const productForm = document.getElementById('product-form');
+
+    // Update variant ID and price when dropdown changes
+    if (variantSelect && hiddenVariantIdInput) {
       variantSelect.addEventListener('change', function() {
-        // Price update handled by form submission
+        const selectedOption = this.options[this.selectedIndex];
+        const selectedVariantId = selectedOption.value;
+        hiddenVariantIdInput.value = selectedVariantId;
+        console.log("Selected variant ID:", selectedVariantId);
+
+        const price = selectedOption.getAttribute('data-price');
+        if (priceDisplay && price) {
+          priceDisplay.textContent = price;
+        }
+      });
+    }
+
+    // Intercept form submission for validation, logging, and AJAX post
+    if (productForm) {
+      productForm.addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent standard page reload
+
+        // Validation
+        const variantId = hiddenVariantIdInput ? hiddenVariantIdInput.value : '';
+        if (!variantId) {
+          alert('Error: No variant selected.');
+          return;
+        }
+        if (isNaN(variantId)) {
+          alert('Error: Selected variant ID is not numeric.');
+          return;
+        }
+
+        const formData = new FormData(productForm);
+
+        // Debug logging of FormData entries
+        console.log("FormData entries:");
+        for (let pair of formData.entries()) {
+          console.log(pair[0] + ': ' + pair[1]);
+        }
+
+        // AJAX POST to /cart/add.js
+        fetch('/cart/add.js', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => {
+          if (!response.ok) {
+            return response.json().then(err => { throw new Error(err.description || 'Failed to add to cart'); });
+          }
+          return response.json();
+        })
+        .then(data => {
+          console.log('Success adding to cart:', data);
+          
+          // Dispatch a cart change event to open AJAX cart drawers if they exist
+          document.dispatchEvent(new CustomEvent('cart:updated', { bubbles: true }));
+          
+          // Redirect to cart
+          window.location.href = '/cart';
+        })
+        .catch(error => {
+          console.error('Error adding to cart:', error);
+          alert(error.message || 'Error adding item to cart. Please try again.');
+        });
       });
     }
 
@@ -335,3 +408,22 @@
     }
   });
 </script>
+
+{% schema %}
+{
+  "name": "Custom Automotive Stickers",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Select Custom Product",
+      "info": "Choose the product whose variants and details should be sold on this custom page."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Automotive Stickers"
+    }
+  ]
+}
+{% endschema %}
