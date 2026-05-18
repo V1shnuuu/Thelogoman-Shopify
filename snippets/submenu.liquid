@@ -1,0 +1,156 @@
+{% if simple_mega_menu %}
+	<ul
+		class="header__submenu simple_mega_menu header__submenu-first_level list-menu list-menu--disclosure  motion-reduce color-{{ section.settings.color_scheme_bg }} list-unstyled"
+		role="list"
+		tabindex="-1"
+	>
+		{%- for childlink in link.links -%}
+			<li
+				tabindex="-1"
+				class="{%- if childlink.links != blank -%}list-menu-has-child{%- endif -%}{% if forloop.index == 1 %} active{% endif %}"
+				data-hover-opacity="2"
+			>
+				{%- if childlink.links == blank -%}
+					<a
+						href="{{ childlink.url }}"
+						{% if childlink.type == 'http_link' and settings.open_new_tab %}
+							target="_blank"
+						{% endif %}
+						class="header__menu-item medium-font list-menu__item focus-inset {% if childlink.current %} header__menu-item--active{% endif %}"
+						{% if childlink.current %}
+							aria-current="page"
+						{% endif %}
+					>
+						<span>
+							{{ childlink.title | escape }}
+						</span>
+					</a>
+				{%- else -%}
+					<a
+						href="##"
+						class="header__menu-item medium-font list-menu__item focus-inset cursor-default"
+					>
+						<span>
+							{{ childlink.title | escape }}
+						</span>
+					</a>
+					<ul
+						class="header__submenu list-menu--disclosure list-menu motion-reduce color-{{ section.settings.color_scheme_bg }} list-unstyled"
+						tabindex="-1"
+					>
+						{%- for grandchildlink in childlink.links -%}
+							<li data-hover-opacity="3">
+								<a
+									href="{{ grandchildlink.url }}"
+									{% if grandchildlink.type == 'http_link'
+										and settings.open_new_tab
+									%}
+										target="_blank"
+									{% endif %}
+									class="header__menu-item medium-font list-menu__item focus-inset{% if grandchildlink.current %} header__menu-item--active{% endif %}"
+									{% if grandchildlink.current %}
+										aria-current="page"
+									{% endif %}
+								>
+									<span>
+										{{ grandchildlink.title | escape }}
+									</span>
+								</a>
+							</li>
+						{%- endfor -%}
+					</ul>
+				{%- endif -%}
+			</li>
+		{%- endfor -%}
+	</ul>
+{% else %}
+	<ul
+		class="header__submenu header__submenu-first_level list-menu list-menu--disclosure  motion-reduce color-{{ section.settings.color_scheme_bg }} list-unstyled"
+		role="list"
+		tabindex="-1"
+	>
+		{%- for childlink in link.links -%}
+			<li
+				tabindex="-1"
+				class="{%- if childlink.links != blank -%}list-menu-has-child{%- endif -%}"
+				data-hover-opacity="2"
+			>
+				{%- if childlink.links == blank -%}
+					<a
+						href="{{ childlink.url }}"
+						{% if childlink.type == 'http_link' and settings.open_new_tab %}
+							target="_blank"
+						{% endif %}
+						class="header__menu-item medium-font list-menu__item focus-inset {% if childlink.current %} header__menu-item--active{% endif %}"
+						{% if childlink.current %}
+							aria-current="page"
+						{% endif %}
+					>
+						<span>
+							{{ childlink.title | escape }}
+						</span>
+					</a>
+				{%- else -%}
+					<a
+						href="##"
+						class="header__menu-item medium-font list-menu__item focus-inset cursor-default"
+					>
+						<span>
+							{{ childlink.title | escape }}
+						</span>
+					</a>
+					<ul
+						class="header__submenu list-menu--disclosure list-menu motion-reduce color-{{ section.settings.color_scheme_bg }} list-unstyled"
+						tabindex="-1"
+					>
+						{%- for grandchildlink in childlink.links -%}
+							<li data-hover-opacity="3">
+								<a
+									href="{{ grandchildlink.url }}"
+									{% if grandchildlink.type == 'http_link'
+										and settings.open_new_tab
+									%}
+										target="_blank"
+									{% endif %}
+									class="header__menu-item medium-font list-menu__item focus-inset{% if grandchildlink.current %} header__menu-item--active{% endif %}"
+									{% if grandchildlink.current %}
+										aria-current="page"
+									{% endif %}
+								>
+									<span>
+										{{ grandchildlink.title | escape }}
+									</span>
+								</a>
+							</li>
+						{%- endfor -%}
+					</ul>
+				{%- endif -%}
+			</li>
+		{%- endfor -%}
+	</ul>
+{% endif %}
+
+<script>
+	(function () {
+		const submenuActive = () => {
+			const parentMenuItems = document.querySelectorAll(
+				'.header__submenu-first_level .list-menu-has-child'
+			);
+
+			parentMenuItems.forEach((item) => {
+				item.addEventListener('mouseenter', () => {
+					parentMenuItems.forEach((el) => el.classList.remove('active'));
+					item.classList.add('active');
+				});
+			});
+		};
+
+		document.addEventListener('DOMContentLoaded', function () {
+			submenuActive();
+		});
+
+		document.addEventListener('shopify:section:load', function () {
+			submenuActive();
+		});
+	})();
+</script>

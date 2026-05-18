@@ -1,0 +1,27 @@
+{% comment %}
+	Renders a heading (or neutral element) with a configurable HTML tag for SEO.
+
+	Accepts:
+	- tag: {String} Merchant-selected tag from theme settings (h1–h6, div, span, p).
+	- default_tag: {String} Fallback when tag is blank or invalid (must match current theme default).
+	- class: {String} Optional class attribute value.
+	- attributes: {String} Optional extra attributes (e.g. block.shopify_attributes).
+	- content: {String} Inner HTML (already escaped by caller where needed).
+
+	Usage:
+	{% capture heading_inner %}…{% endcapture %}
+	{% render 'heading-element', tag: section.settings.heading_tag, default_tag: 'h2', class: 'section-header__title', content: heading_inner %}
+{% endcomment %}
+{% liquid
+	assign raw = tag | strip | downcase
+	if raw == blank
+		assign raw = default_tag
+	endif
+	case raw
+		when 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div', 'span', 'p'
+			assign el = raw
+		else
+			assign el = default_tag | default: 'h2'
+	endcase
+%}
+<{{ el }}{% if class != blank %} class="{{ class }}"{% endif %}{% if attributes != blank %} {{ attributes }}{% endif %}>{{ content }}</{{ el }}>

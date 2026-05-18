@@ -1,0 +1,74 @@
+{% assign linked_products = product.metafields.custom.linked_products.value %}
+{% if linked_products != blank and linked_products.size > 0 %}
+  <div class="linked-products">
+    {% if block.settings.enable_linked_products_color == true %}
+      <div class="linked-products__title">{{ 'general.color' | t }}:</div>
+      <div class="linked-products__color-selector">
+        <ul class="linked-products__product-colors list--inline">
+          <li class="color-item">
+            <a href="{{ product.url }}" aria-label="{{ product.title }}">
+              {%- if product.metafields.custom.linked_product_color.value == blank
+                and block.settings.enable_default_image
+                and product.featured_image
+              -%}
+                <span class="color-item-image">
+                  {{ product.featured_image | image_url: width: 22 | image_tag: loading: 'lazy', widths: '22, 44' }}
+                </span>
+              {% else %}
+                <span
+                  style="background: {{ product.metafields.custom.linked_product_color.value | default: '#000000' }};"
+                  class="active"
+                ></span>
+              {% endif %}
+            </a>
+          </li>
+          {% for linked_product in linked_products %}
+            <li class="color-item">
+              <a href="{{ linked_product.url }}" aria-label="{{ linked_product.title }}">
+                {%- if linked_product.metafields.custom.linked_product_color.value == blank
+                  and block.settings.enable_default_image
+                  and linked_product.featured_image
+                -%}
+                  <span class="color-item-image">
+                    {{
+                      linked_product.featured_image
+                      | image_url: width: 22
+                      | image_tag: loading: 'lazy', widths: '22, 44'
+                    }}
+                  </span>
+                {% else %}
+                  <span
+                    style="background: {{ linked_product.metafields.custom.linked_product_color.value | default: '#000000' }};"
+                  ></span>
+                {% endif %}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+    {% if block.settings.enable_linked_products_option == true %}
+      {% if product.metafields.custom.linked_product_option.value != blank %}
+        {% if block.settings.linked_product_option_title != blank %}
+          <div class="linked-products__title">{{ block.settings.linked_product_option_title }}:</div>
+        {% endif %}
+        <div class="linked-products__option-selector">
+          <ul class="linked-products__product-options list--inline">
+            <li class="option-item">
+              <a class="link-hover-line active" href="{{ product.url }}" aria-label="{{ product.title }}">
+                <span>{{ product.metafields.custom.linked_product_option.value }}</span>
+              </a>
+            </li>
+            {% for linked_product in linked_products %}
+              <li class="option-item">
+                <a class="link-hover-line" href="{{ linked_product.url }}" aria-label="{{ linked_product.title }}">
+                  <span>{{ linked_product.metafields.custom.linked_product_option.value }}</span>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    {% endif %}
+  </div>
+{% endif %}

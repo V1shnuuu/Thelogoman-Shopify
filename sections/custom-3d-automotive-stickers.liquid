@@ -1,0 +1,337 @@
+{% comment %}
+  Custom 3D Automotive Stickers Product Page Section
+  - Product variant selection
+  - File upload for custom designs
+  - Line item property data storage
+{% endcomment %}
+
+<div class="custom-automotive-stickers">
+  <div class="container">
+    <div class="row">
+      <!-- Product Image -->
+      <div class="col-md-6 product-image-section">
+        <div class="product-image-wrapper">
+          {% if product.featured_image %}
+            <img 
+              src="{{ product.featured_image | img_url: '600x600' }}" 
+              alt="{{ product.title }}"
+              class="img-fluid product-main-image"
+            >
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Product Details & Form -->
+      <div class="col-md-6 product-details-section">
+        <h1 class="product-title">{{ product.title }}</h1>
+        
+        {% if product.description %}
+          <div class="product-description">
+            {{ product.description }}
+          </div>
+        {% endif %}
+
+        <!-- Product Form -->
+        <form method="post" action="/cart/add" id="product-form" class="product-form">
+          
+          <!-- Variant Selection -->
+          {% if product.available %}
+            <div class="variant-selector-group">
+              <label for="variant-selector" class="form-label">Select Sticker Variant:</label>
+              <select 
+                id="variant-selector" 
+                name="id" 
+                class="form-select variant-select"
+              >
+                {% for variant in product.variants %}
+                  <option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected{% endif %}>
+                    {{ variant.title }} - {{ variant.price | money }}
+                  </option>
+                {% endfor %}
+              </select>
+            </div>
+          {% endif %}
+
+          <!-- File Upload Section -->
+          <div class="file-upload-group">
+            <label for="design-file" class="form-label">Upload Your Custom Design (Optional):</label>
+            <div class="file-upload-wrapper">
+              <input 
+                type="file" 
+                id="design-file" 
+                name="properties[Custom Design]" 
+                accept=".png,.jpg,.jpeg,.pdf,.ai,.psd"
+                class="form-control file-input"
+              >
+              <small class="form-text text-muted">
+                Accepted formats: PNG, JPG, PDF, AI, PSD (Max 10MB)
+              </small>
+              <div id="file-info" class="mt-2 file-info"></div>
+            </div>
+          </div>
+
+          <!-- Additional Properties -->
+          <div class="properties-group">
+            <div class="form-group">
+              <label for="sticker-size" class="form-label">Sticker Size Preference:</label>
+              <input 
+                type="text" 
+                id="sticker-size" 
+                name="properties[Sticker Size]" 
+                placeholder="e.g., 3 inches, 6 inches"
+                class="form-control"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="special-instructions" class="form-label">Special Instructions:</label>
+              <textarea 
+                id="special-instructions" 
+                name="properties[Special Instructions]" 
+                placeholder="Any special requests for your stickers?"
+                class="form-control"
+                rows="4"
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Price & Quantity -->
+          <div class="product-price-quantity">
+            <div class="price-section">
+              <span class="price-label">Price:</span>
+              <span id="product-price" class="product-price">{{ product.selected_or_first_available_variant.price | money }}</span>
+            </div>
+
+            <div class="quantity-section">
+              <label for="quantity" class="form-label">Quantity:</label>
+              <input 
+                type="number" 
+                id="quantity" 
+                name="quantity" 
+                value="1" 
+                min="1"
+                class="form-control quantity-input"
+              >
+            </div>
+          </div>
+
+          <!-- Add to Cart Button -->
+          <button 
+            type="submit" 
+            class="btn btn-primary btn-add-to-cart"
+            {% unless product.available %}disabled{% endunless %}
+          >
+            {% if product.available %}
+              Add to Cart
+            {% else %}
+              Out of Stock
+            {% endif %}
+          </button>
+        </form>
+
+        <!-- Product Details Tabs -->
+        {% if product.description or product.metafields.custom.specifications %}
+          <div class="product-details-tabs mt-5">
+            <nav class="nav nav-tabs" role="tablist">
+              <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button">Description</button>
+              {% if product.metafields.custom.specifications %}
+                <button class="nav-link" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs" type="button">Specifications</button>
+              {% endif %}
+            </nav>
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="description">
+                {{ product.description }}
+              </div>
+              {% if product.metafields.custom.specifications %}
+                <div class="tab-pane fade" id="specs">
+                  {{ product.metafields.custom.specifications }}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .custom-automotive-stickers {
+    padding: 40px 0;
+  }
+
+  .custom-automotive-stickers .product-image-wrapper {
+    margin-bottom: 30px;
+  }
+
+  .custom-automotive-stickers .product-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+  }
+
+  .custom-automotive-stickers .product-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 30px;
+  }
+
+  .custom-automotive-stickers .variant-selector-group,
+  .custom-automotive-stickers .file-upload-group,
+  .custom-automotive-stickers .properties-group {
+    margin-bottom: 25px;
+  }
+
+  .custom-automotive-stickers .form-label {
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .custom-automotive-stickers .form-control,
+  .custom-automotive-stickers .form-select {
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  .custom-automotive-stickers .form-control:focus,
+  .custom-automotive-stickers .form-select:focus {
+    border-color: #0066cc;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+  }
+
+  .custom-automotive-stickers .file-info {
+    font-size: 13px;
+    color: #666;
+  }
+
+  .custom-automotive-stickers .product-price-quantity {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin: 30px 0;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+
+  .custom-automotive-stickers .price-section {
+    flex: 1;
+  }
+
+  .custom-automotive-stickers .price-label {
+    font-weight: 600;
+    color: #666;
+    margin-right: 10px;
+  }
+
+  .custom-automotive-stickers .product-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+
+  .custom-automotive-stickers .quantity-section {
+    width: 150px;
+  }
+
+  .custom-automotive-stickers .quantity-input {
+    width: 100%;
+    text-align: center;
+  }
+
+  .custom-automotive-stickers .btn-add-to-cart {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #0066cc;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .custom-automotive-stickers .btn-add-to-cart:hover {
+    background-color: #0052a3;
+  }
+
+  .custom-automotive-stickers .btn-add-to-cart:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  .custom-automotive-stickers .product-details-tabs {
+    border-top: 1px solid #eee;
+    padding-top: 30px;
+  }
+
+  .custom-automotive-stickers .nav-tabs {
+    border-bottom: 2px solid #eee;
+  }
+
+  .custom-automotive-stickers .nav-tabs .nav-link {
+    border: none;
+    color: #666;
+    font-weight: 500;
+    padding-bottom: 10px;
+    margin-bottom: -2px;
+    border-bottom: 2px solid transparent;
+  }
+
+  .custom-automotive-stickers .nav-tabs .nav-link.active {
+    color: #0066cc;
+    border-bottom-color: #0066cc;
+  }
+
+  .custom-automotive-stickers .tab-content {
+    padding-top: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .custom-automotive-stickers .product-price-quantity {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .custom-automotive-stickers .quantity-section {
+      width: 100%;
+    }
+
+    .custom-automotive-stickers .product-title {
+      font-size: 24px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Update price when variant changes
+    const variantSelect = document.getElementById('variant-selector');
+    if (variantSelect) {
+      variantSelect.addEventListener('change', function() {
+        // Price update handled by form submission
+      });
+    }
+
+    // File upload handling
+    const designFile = document.getElementById('design-file');
+    const fileInfo = document.getElementById('file-info');
+    
+    if (designFile) {
+      designFile.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+          const sizeMB = (file.size / (1024 * 1024)).toFixed(2);
+          fileInfo.innerHTML = `<strong>File:</strong> ${file.name} (${sizeMB} MB)`;
+        }
+      });
+    }
+  });
+</script>

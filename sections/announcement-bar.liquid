@@ -1,0 +1,142 @@
+{% comment %}<script src="{{ 'announcement.js' | asset_url }}" defer="defer"></script>{% endcomment %}
+
+<style>
+	:root {
+		--announcement-height-fixed: {{ section.settings.height }}px;
+	}
+</style>
+
+<div
+	class="announcement-bar color-{{ section.settings.color_scheme }} background"
+	role="region"
+	aria-label="{{ 'sections.header.announcement' | t }}"
+	data-id="shopify-section-{{ section.id }}"
+>
+	<div
+		class=" announcement-bar__container"
+		data-announcement-id="{{ section.id }}"
+	>
+		<div class="announcement-wrapper">
+			<div></div>
+			<div class="announcement-js-{{ section.id }}">
+				<div class="announcement-bar__box">
+					{%- if section.settings.text != blank -%}
+						<div class="announcement-bar__message">
+							{%- if section.settings.image != blank -%}
+								<figure class="announcement-bar__image">
+									{{
+										section.settings.image
+										| image_url: width: 375
+										| image_tag:
+											loading: 'lazy',
+											widths: '25, 75, 150, 275, 375'
+									}}
+								</figure>
+							{%- endif -%}
+							<div class="announcement-bar__text small-font">
+								{{ section.settings.text }}
+							</div>
+						</div>
+					{%- endif -%}
+				</div>
+			</div>
+			{% render 'icon-close' %}
+		</div>
+	</div>
+</div>
+{% javascript %}
+	const announcementHeight = () => {
+		// Select all elements
+		const announcements = document.querySelectorAll(
+			'.shopify-section-group-header-group.section-announcement'
+		);
+
+		if (announcements.length === 0) {
+			return;
+		}
+
+		// Initialize the variable to store the total height
+		let announcementHeight = 0;
+
+		// Iterate over each element and add its height to the total
+		announcements.forEach((announcement) => {
+			const height = announcement.offsetHeight; // Get the height of the element
+			announcementHeight += height; // Add it to the total
+		});
+
+		document.documentElement.style.setProperty(
+			'--announcement-height',
+			`${announcementHeight}px`
+		);
+		return announcementHeight;
+	};
+
+	announcementHeight();
+
+	const iconClose = () => {
+		const icons = document.querySelectorAll(".icon-close");
+		icons.forEach((icon) => {
+			icon.addEventListener("click", function () {
+				const announcement = icon.closest(".section-announcement");
+				if (announcement) {
+					announcement.style.display = "none";
+				}
+				announcementHeight();
+			});
+		});
+	};
+
+	iconClose();
+
+	document.addEventListener('shopify:section:load', function () {
+		announcementHeight();
+		iconClose();
+	});
+	window.addEventListener('resize', announcementHeight);
+{% endjavascript %}
+
+{% schema %}
+{
+	"name": "t:sections.announcement-bar.name",
+	"class": "section-announcement",
+	"enabled_on": {
+		"groups": ["header"],
+		"templates": ["*"]
+	},
+	"settings": [
+		{
+			"type": "range",
+			"id": "height",
+			"min": 40,
+			"max": 100,
+			"step": 5,
+			"default": 40,
+			"label": "t:sections.announcement-bar.settings.height.label",
+			"info": "t:sections.announcement-bar.settings.height.info"
+		},
+		{
+			"type": "color_scheme",
+			"id": "color_scheme",
+			"default": "background-2",
+			"label": "t:sections.all.color_scheme.label"
+		},
+		{
+			"type": "image_picker",
+			"id": "image",
+			"label": "t:sections.announcement-bar.blocks.slide.settings.image.label",
+			"info": "t:sections.announcement-bar.blocks.slide.settings.image.info"
+		},
+		{
+			"type": "richtext",
+			"id": "text",
+			"default": "t:sections.announcement-bar.settings.text.default",
+			"label": "t:sections.announcement-bar.blocks.slide.settings.text.label"
+		}
+	],
+	"presets": [
+		{
+			"name": "t:sections.announcement-bar.name"
+		}
+	]
+}
+{% endschema %}

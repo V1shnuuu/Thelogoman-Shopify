@@ -1,0 +1,187 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "t:sections.footer.settings.footer-group.label",
+  "sections": {
+    "ticker_gccFEx": {
+      "type": "ticker",
+      "blocks": {
+        "media_block_hD7y84": {
+          "type": "media_block",
+          "settings": {
+            "heading": "Promo Alert",
+            "ticker_link": "",
+            "social_icon": "none"
+          }
+        },
+        "media_block_tDbxBn": {
+          "type": "media_block",
+          "settings": {
+            "heading": "Promo Alert",
+            "ticker_link": "",
+            "social_icon": "none"
+          }
+        },
+        "media_block_dWGQfn": {
+          "type": "media_block",
+          "settings": {
+            "heading": "Promo Alert",
+            "ticker_link": "",
+            "social_icon": "none"
+          }
+        },
+        "media_block_zaF3he": {
+          "type": "media_block",
+          "settings": {
+            "heading": "Promo Alert",
+            "ticker_link": "",
+            "social_icon": "none"
+          }
+        },
+        "media_block_ijNGmY": {
+          "type": "media_block",
+          "settings": {
+            "heading": "Promo Alert",
+            "ticker_link": "",
+            "social_icon": "none"
+          }
+        },
+        "media_block_Wq96w9": {
+          "type": "media_block",
+          "settings": {
+            "heading": "Promo Alert",
+            "ticker_link": "",
+            "social_icon": "none"
+          }
+        },
+        "media_block_JECfaV": {
+          "type": "media_block",
+          "settings": {
+            "heading": "Promo Alert",
+            "ticker_link": "",
+            "social_icon": "none"
+          }
+        },
+        "media_block_KdbRM3": {
+          "type": "media_block",
+          "settings": {
+            "heading": "Promo Alert",
+            "ticker_link": "",
+            "social_icon": "none"
+          }
+        },
+        "media_block_8XEPUX": {
+          "type": "media_block",
+          "settings": {
+            "heading": "Promo Alert",
+            "ticker_link": "",
+            "social_icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "media_block_hD7y84",
+        "media_block_tDbxBn",
+        "media_block_dWGQfn",
+        "media_block_zaF3he",
+        "media_block_ijNGmY",
+        "media_block_Wq96w9",
+        "media_block_JECfaV",
+        "media_block_KdbRM3",
+        "media_block_8XEPUX"
+      ],
+      "settings": {
+        "color_scheme": "background-2",
+        "ticker_speed": 25,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "enable_border_top": true,
+        "enable_border_bottom": false
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer-1": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
+        },
+        "footer-2": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
+        },
+        "footer-3": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
+        },
+        "footer-4": {
+          "type": "store_info",
+          "settings": {
+            "text": "<p>This section can showcase a quick summary of what your store offers, such as premium products, customer service, or brand values.</p>",
+            "alignment": "center"
+          }
+        },
+        "footer-5": {
+          "type": "subscribe",
+          "settings": {
+            "heading": "Subscribe",
+            "button_label": "Subscribe",
+            "button_link": "",
+            "button_style": "primary",
+            "button_arrow": false,
+            "privacy_consent": true,
+            "newsletter_sub": ""
+          }
+        }
+      },
+      "block_order": [
+        "footer-1",
+        "footer-2",
+        "footer-3",
+        "footer-4",
+        "footer-5"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "show_logo": true,
+        "logo": "shopify://shop_images/white-400x90_f84de8c0-c693-4b04-9025-46094ced9c91.png",
+        "logo_width": 290,
+        "enable_language_selector": true,
+        "enable_country_selector": true,
+        "enable_follow_on_shop": false,
+        "payment_enable": true,
+        "show_policy": false,
+        "show_social": true,
+        "copyright_show": true,
+        "margin_top": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "s",
+        "enable_border_top": true,
+        "enable_border_bottom": true
+      }
+    }
+  },
+  "order": [
+    "ticker_gccFEx",
+    "footer"
+  ]
+}

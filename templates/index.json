@@ -1,0 +1,887 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection_grid_qqXWaA": {
+      "type": "collection-grid",
+      "blocks": {
+        "categories_FqGJAw": {
+          "type": "categories",
+          "settings": {
+            "collection": "3d-automotive-sticker",
+            "collection_image": "{{ block.settings.collection.image }}",
+            "button_label": "Shop Collection",
+            "button_link": "",
+            "button_arrow": true,
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "categories_UihFpz": {
+          "type": "categories",
+          "settings": {
+            "collection": "3d-mobile-stickers",
+            "button_label": "Shop Collection",
+            "button_link": "",
+            "button_arrow": true,
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "categories_BrMB88": {
+          "type": "categories",
+          "settings": {
+            "collection": "3d-keychain",
+            "button_label": "Shop Collection",
+            "button_link": "",
+            "button_arrow": true,
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "categories_cbVVzG": {
+          "type": "categories",
+          "settings": {
+            "collection": "3d-car-hanging",
+            "button_label": "Shop Collection",
+            "button_link": "",
+            "button_arrow": true,
+            "column_start": 4,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "categories_VJ7XCL": {
+          "type": "categories",
+          "settings": {
+            "collection": "clothing-accessories",
+            "button_label": "View Collection",
+            "button_link": "",
+            "button_arrow": true,
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        }
+      },
+      "block_order": [
+        "categories_FqGJAw",
+        "categories_UihFpz",
+        "categories_BrMB88",
+        "categories_cbVVzG",
+        "categories_VJ7XCL"
+      ],
+      "custom_css": [],
+      "settings": {
+        "section_header_type": "type1",
+        "show_arrows": true,
+        "enable_border_top": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "section_layout": "grid",
+        "is_autoplay": true,
+        "slider_per_row": 2,
+        "slider_speed": 1.1,
+        "slider_delay": 3,
+        "columns": 4,
+        "blocks_spacing": "m",
+        "image_ratio": "square",
+        "card_type": "standart",
+        "hover_effect": "zoom",
+        "text_horizontal": "center",
+        "overlay_opacity": 20,
+        "heading_size": "h3",
+        "desc_size": "small-font",
+        "text_animation": true,
+        "show_collection_desc": false,
+        "show_collection_button": false,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "custom_liquid_NUyBHY": {
+      "type": "custom-liquid",
+      "custom_css": [],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% style %}\n\n/* ================= DESKTOP ================= */\n@media (min-width:1150px){\n  .collection-grid{position:relative;}\n  .collection-grid__wrapper{\n    display:flex!important;\n    justify-content:space-between;\n    padding:25px 30%!important;\n    position:absolute;\n    top:0;left:0;width:100%;\n    z-index:3;\n    background:transparent!important;\n  }\n  .collection-grid__cards{\n    flex:0 0 20%;\n    text-align:center;\n    background:transparent!important;\n  }\n  .collection-grid__cards h3{\n    font-size:12px!important;\n    color:#fff!important;\n  }\n}\n\n/* ================= MOBILE ONLY ================= */\n@media (max-width:480px){\n\n  /* Collection grid overlay */\n  .collection-grid{\n    position:absolute!important;\n    top:0;\n    left:0;\n    width:100%;\n    z-index:3;\n    background:transparent!important;\n    overflow:hidden!important;\n  }\n\n  /* Horizontal touch slider */\n  .collection-grid__wrapper{\n    display:flex!important;\n    flex-wrap:nowrap!important;\n    gap:10px!important;\n    padding:12px 16px!important;\n    background:transparent!important;\n    position:static!important;\n    width:auto!important;\n    overflow-x:auto!important;\n    overflow-y:hidden!important;\n    -webkit-overflow-scrolling:touch;\n    scrollbar-width:none;\n    scroll-snap-type:x mandatory;\n    scroll-behavior:smooth;\n    overscroll-behavior-x:contain;\n    touch-action:pan-x;\n  }\n\n  .collection-grid__wrapper::-webkit-scrollbar{\n    display:none;\n  }\n\n  /* Show 3 icons */\n  .collection-grid__cards{\n    flex:0 0 calc((100% - 32px)/3)!important;\n    min-width:calc((100% - 32px)/3)!important;\n    scroll-snap-align:start;\n    text-align:center;\n    background:transparent!important;\n  }\n\n  /* Remove default card spacing */\n  .collection-card{\n    display:flex!important;\n    flex-direction:column;\n    gap:0!important;\n    padding-bottom:0!important;\n  }\n\n  /* Icon size */\n  .collection-grid__cards img,\n  .collection-grid__cards svg{\n    width:80px!important;\n    height:80px!important;\n    border-radius:50%;\n    object-fit:cover;\n    margin:0 auto;\n  }\n\n  /* Collection titles */\n  .collection-grid__cards h3,\n  .collection-card__title{\n    font-size:10px!important;\n    line-height:1!important;\n    color:#fff!important;\n    text-transform:uppercase;\n    margin-top:6px!important;\n    letter-spacing:.5px!important;\n  }\n\n  /* Hero section */\n  .hero,\n  .banner,\n  .slideshow{\n    min-height:700px!important;\n    height:700px!important;\n    padding-top:0!important;\n    padding-bottom:0!important;\n    background-position:center top!important;\n    overflow:hidden!important;\n  }\n\n  /* Hero wrapper */\n  .hero__wrapper,\n  .hero_wrapper{\n    --slide-height:700px;\n    height:700px!important;\n    min-height:700px!important;\n  }\n\n  /* Hero media containers */\n  .hero__media,\n  .hero__image,\n  .hero picture,\n  .banner picture{\n    width:100%!important;\n    height:100%!important;\n    min-height:700px!important;\n    overflow:hidden!important;\n  }\n\n  /* Hero background image with slow zoom animation */\n  .hero img,\n  .banner img,\n  .slideshow img{\n    width:100%!important;\n    height:100%!important;\n    min-height:700px!important;\n    object-fit:cover!important;\n    object-position:center center!important;\n    transform:scale(1.25);\n    transform-origin:center center;\n    animation:heroZoomMobile 12s ease-in-out infinite alternate;\n    will-change:transform;\n  }\n\n  @keyframes heroZoomMobile{\n    from{transform:scale(1.15);}\n    to{transform:scale(1.30);}\n  }\n\n  /* Hero text position */\n  .hero__wrapper .hero__content,\n  .hero_wrapper .hero_content{\n    padding-top:320px!important;\n    padding-bottom:0!important;\n    display:block!important;\n    position:relative;\n    z-index:2;\n    max-width:100%!important;\n  }\n\n  /* Remove section spacing around hero */\n  .shopify-section.hero-section.spaced-section,\n  .hero-section.spaced-section{\n    padding-top:0!important;\n    padding-bottom:0!important;\n  }\n\n  /* Add space above next section */\n  .hero-section + .spaced-section,\n  .hero + .spaced-section,\n  .shopify-section.hero-section + .shopify-section{\n    padding-top:40px!important;\n  }\n}\n\n{% endstyle %}"
+      }
+    },
+    "hero_section_ry4mym": {
+      "type": "hero-section",
+      "blocks": {
+        "column_RDrBeq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_May_13_2026_06_18_35_PM.png"
+          }
+        },
+        "column_X33KEp": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_May_14_2026_01_15_14_PM.png"
+          }
+        },
+        "column_dWQ3yk": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_May_13_2026_06_18_21_PM.png"
+          }
+        }
+      },
+      "block_order": [
+        "column_RDrBeq",
+        "column_X33KEp",
+        "column_dWQ3yk"
+      ],
+      "custom_css": [],
+      "settings": {
+        "color_scheme": "background-2",
+        "image_size": "medium",
+        "overlay_opacity": 20,
+        "heading": "EXPRESS YOUR STYLE WITHOUT SAYING ANYTHING",
+        "heading_tag": "h1",
+        "text": "<p>Discover bold  pieces inspired by modern culture, designed for people who want their personality reflected in every detail of their lifestyle.<br/><br/></p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "margin_top": "no-indent",
+        "margin_bottom": "l"
+      }
+    },
+    "popular-products": {
+      "type": "popular-products",
+      "settings": {
+        "product_list": [
+          "thala-pathy-legacy-unisex-tshirt",
+          "groot-radium-3d-car-hanging",
+          "alien-reflective-t-shirt",
+          "punis-her-black-3d-car-hanging",
+          "aveng-ers-white-and-black-3d-emblem-decal-mobile-phone-sticker-logo",
+          "beast-vijay-car-bike-sticker",
+          "buddh-a-3d-car-hanging",
+          "batma-n-3d-mobile-phone-sticker-logo"
+        ],
+        "per_row": 4,
+        "section_header_type": "type2",
+        "mobile_slider_grid_layout": "slider",
+        "heading": "New Styles, Just Dropped",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "subheading": "New Collection",
+        "description": "",
+        "enable_border_top": true,
+        "button_label": "Shop All",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "autoplay": false,
+        "stop_autoplay": false,
+        "show_arrows": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "image_ratio": "square",
+        "image_fit": "cover",
+        "show_two_cards": true,
+        "show_sku": false,
+        "show_vendor": false,
+        "show_collection_name": false,
+        "show_color_swatch": true,
+        "product_variant_type": "color",
+        "show_desc": false,
+        "margin_top": "no-indent",
+        "margin_bottom": "l"
+      }
+    },
+    "slideshow_HwecET": {
+      "type": "slideshow",
+      "blocks": {
+        "slideshow_item_NfVLPW": {
+          "type": "slideshow_item",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_May_14_2026_06_10_22_PM.png",
+            "color_scheme": "background-2",
+            "subheading": "",
+            "heading": "STYLE IN EVERY DETAIL",
+            "heading_tag": "h1",
+            "text": "<p><br/>Compact. Personal. Everyday-ready. Our custom keychains are carried by customers to add identity to bags, keys, and travel gear.<br/><br/></p>",
+            "button_label": "View More",
+            "button_link": "shopify://collections/3d-keychain",
+            "button_style": "primary",
+            "button_arrow": true,
+            "overlay_opacity": 20,
+            "article": ""
+          }
+        },
+        "slideshow_item_E7kWLw": {
+          "type": "slideshow_item",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_May_14_2026_06_00_51_PM.png",
+            "color_scheme": "background-2",
+            "subheading": "",
+            "heading": "DRIVE WITH YOUR VIBE",
+            "heading_tag": "h1",
+            "text": "<p>Minimal. Stylish. Everyday-ready. Our car accessories are styled by customers to add personality and character to every drive.</p>",
+            "button_label": "View More",
+            "button_link": "shopify://collections/3d-car-hanging",
+            "button_style": "primary",
+            "button_arrow": true,
+            "overlay_opacity": 20,
+            "article": ""
+          }
+        },
+        "slideshow_item_kGrxRy": {
+          "type": "slideshow_item",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_May_14_2026_06_42_43_PM.png",
+            "color_scheme": "background-2",
+            "subheading": "",
+            "heading": "REAL FITS. REAL ENERGY.",
+            "heading_tag": "h1",
+            "text": "<p>Relaxed. Reflective. Everyday-ready. Our oversized graphic tees are worn by customers for effortless streetwear style and comfort.</p><h3></h3>",
+            "button_label": "View More",
+            "button_link": "shopify://collections/clothing-accessories",
+            "button_style": "primary",
+            "button_arrow": true,
+            "overlay_opacity": 20,
+            "article": ""
+          }
+        },
+        "slideshow_item_HY6H4d": {
+          "type": "slideshow_item",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_May_14_2026_07_12_40_PM_43a84af0-95c8-48e3-88d9-4fa34ff0fe4e.png",
+            "color_scheme": "background-2",
+            "subheading": "",
+            "heading": "STICK YOUR STYLE",
+            "heading_tag": "h1",
+            "text": "<p>Minimal. Bold. Everyday-ready. Our 3D emblem stickers are styled by customers to add personality without overdoing it.</p><h3></h3>",
+            "button_label": "View More",
+            "button_link": "shopify://collections/3d-mobile-stickers",
+            "button_style": "primary",
+            "button_arrow": true,
+            "overlay_opacity": 20,
+            "article": ""
+          }
+        }
+      },
+      "block_order": [
+        "slideshow_item_NfVLPW",
+        "slideshow_item_E7kWLw",
+        "slideshow_item_kGrxRy",
+        "slideshow_item_HY6H4d"
+      ],
+      "settings": {
+        "section_header_type": "type1",
+        "enable_border_top": true,
+        "subheading": "COMMUNITY PICKS",
+        "heading": "<strong>YOUR STYLE, YOUR SIGNATURE</strong>",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "Explore Our Story",
+        "button_link": "shopify://collections/3d-mobile-stickers",
+        "button_style": "primary",
+        "button_arrow": false,
+        "section_layout": "container",
+        "section_alignment": "center",
+        "vertical_alignment": "center",
+        "container_size": "small",
+        "image_size": "small",
+        "transition_effect": "stretch",
+        "is_autoplay": true,
+        "show_pagination": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "margin_top": "no-indent",
+        "margin_bottom": "l"
+      }
+    },
+    "collapsible_with_image_B4WWqq": {
+      "type": "collapsible-with-image",
+      "blocks": {
+        "collage_wNmT78": {
+          "type": "collage",
+          "settings": {
+            "heading": "REBELS X SPITFIRE",
+            "description": "<p>This collection brings together bold, sharp designs with a street-smart edge, perfect for those who thrive on speed and energy. It’s made for individuals who want their style to reflect their dynamic lifestyle.</p>"
+          }
+        },
+        "collage_eU9K7L": {
+          "type": "collage",
+          "settings": {
+            "heading": "REBELS x RENEGADE",
+            "description": "<p>A collaboration that focuses on unique, statement-making jewelry for those who live life on their own terms. This collection is all about embracing individuality and breaking away from the ordinary.</p>"
+          }
+        },
+        "collage_eJTHAm": {
+          "type": "collage",
+          "settings": {
+            "heading": "REBELS x TRAILBLAZER",
+            "description": "<p>Designed with innovation in mind, this collection features modern pieces that stand out. It’s created for leaders and trendsetters who are always ahead of the curve in both fashion and attitude.</p>"
+          }
+        },
+        "collage_GtdgDw": {
+          "type": "collage",
+          "settings": {
+            "heading": "REBELS x MAVERICK",
+            "description": "<p>Crafted for independent thinkers and those who dare to be different, this collection offers bold, standout pieces that reflect a fearless sense of style. It’s jewelry that speaks to those who go against the grain.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "collage_wNmT78",
+        "collage_eU9K7L",
+        "collage_eJTHAm",
+        "collage_GtdgDw"
+      ],
+      "settings": {
+        "section_header_type": "type1",
+        "enable_border_top": false,
+        "subheading": "Collaborations",
+        "heading": "",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "View more",
+        "button_link": "shopify://collections/3d-car-hanging",
+        "button_style": "primary",
+        "button_arrow": true,
+        "margin_top": "no-indent",
+        "margin_bottom": "l"
+      }
+    },
+    "grid_banner_cYYmL7": {
+      "type": "grid-banner",
+      "blocks": {
+        "column_zDAcQm": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_May_14_2026_06_38_06_PM.png",
+            "overlay_opacity": 20,
+            "heading": "FAN BOY MOMENT",
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "text": "<p>Don’t miss out on the key pieces everyone’s talking about.</p>",
+            "button_label": "Shop Now",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": true,
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "column_TgMGg7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_May_14_2026_06_53_56_PM.png",
+            "overlay_opacity": 0,
+            "heading": "BUILT TO STAND OUT",
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "text": "<p>Lead the way with standout styles that define the season.</p>",
+            "button_label": "Shop Now",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": true,
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "column_xttm94": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_May_14_2026_06_52_51_PM.png",
+            "overlay_opacity": 0,
+            "heading": "<strong>Must-Have</strong>",
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "text": "<p>Elevate your wardrobe with styles that stuns everyone at first glance </p>",
+            "button_label": "Shop Now",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": true,
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "column_Xzd3eB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_May_14_2026_06_47_20_PM.png",
+            "overlay_opacity": 0,
+            "heading": "<strong>Trend Setters</strong>",
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "text": "<p>Own the pieces bringing fresh energy to everyday dressing.</p>",
+            "button_label": "Shop Now",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": true,
+            "column_start": 4,
+            "column_end": 5,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        }
+      },
+      "block_order": [
+        "column_zDAcQm",
+        "column_TgMGg7",
+        "column_xttm94",
+        "column_Xzd3eB"
+      ],
+      "settings": {
+        "columns": 4,
+        "color_scheme": "",
+        "section_header_type": "type2",
+        "enable_border_top": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "image_ratio": "portrait",
+        "text_horizontal": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "l",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "popular_products_EpxFXV": {
+      "type": "popular-products",
+      "settings": {
+        "product_list": [],
+        "per_row": 4,
+        "section_header_type": "type2",
+        "mobile_slider_grid_layout": "slider",
+        "heading": "Artful Jewelry for Extraordinary Looks",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "subheading": "New Collection",
+        "description": "",
+        "enable_border_top": true,
+        "button_label": "Shop All",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "autoplay": false,
+        "stop_autoplay": false,
+        "show_arrows": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "image_ratio": "square",
+        "image_fit": "cover",
+        "show_two_cards": true,
+        "show_sku": false,
+        "show_vendor": false,
+        "show_collection_name": false,
+        "show_color_swatch": true,
+        "product_variant_type": "color",
+        "show_desc": false,
+        "margin_top": "no-indent",
+        "margin_bottom": "l"
+      }
+    },
+    "ticker_with_content_QMbU7j": {
+      "type": "ticker-with-content",
+      "settings": {
+        "color_scheme": "",
+        "ticker_text": "Save 25% on Statement Pieces",
+        "heading_size": "h1",
+        "ticker_speed": 7.5,
+        "subheading": "Big Sale",
+        "description": "<p>This unique collection blends everyday wear with bold statement pieces, creating the perfect look for every occasion.</p>",
+        "button_label": "Shop Sale",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": true,
+        "margin_top": "no-indent",
+        "margin_bottom": "l",
+        "padding_top": "l",
+        "padding_bottom": "l"
+      }
+    },
+    "products_with_image_fMQXfa": {
+      "type": "products-with-image",
+      "blocks": {
+        "product_item_i4YLDd": {
+          "type": "product_item",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_item_zzycYY": {
+          "type": "product_item",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_item_3JT6nD": {
+          "type": "product_item",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_item_Hjg7kR": {
+          "type": "product_item",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_item_i4YLDd",
+        "product_item_zzycYY",
+        "product_item_3JT6nD",
+        "product_item_Hjg7kR"
+      ],
+      "settings": {
+        "section_header_type": "type2",
+        "enable_border_top": true,
+        "subheading": "New Collection",
+        "heading": "Shop the New Trends",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "description": "",
+        "collection": "",
+        "product_limit": 4,
+        "button_label": "Shop All",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "products_per_row": "two",
+        "animation": false,
+        "inner_heading": "New Silver Generation",
+        "inner_heading_size": "h1",
+        "inner_heading_tag": "h2",
+        "text_animation": true,
+        "inner_description": "<p>We created a unique design and implemented it.</p>",
+        "overlay_opacity": 20,
+        "image_ratio": "square",
+        "image_fit": "cover",
+        "show_color_swatch": false,
+        "product_variant_type": "color",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "parallax_gallery_6UexAm": {
+      "type": "parallax-gallery",
+      "blocks": {
+        "column_JhbcCQ": {
+          "type": "column",
+          "settings": {
+            "image_ratio": "portrait"
+          }
+        },
+        "column_CYVMYD": {
+          "type": "column",
+          "settings": {
+            "image_ratio": "square"
+          }
+        },
+        "column_jtBCEM": {
+          "type": "column",
+          "settings": {
+            "image_ratio": "portrait"
+          }
+        }
+      },
+      "block_order": [
+        "column_JhbcCQ",
+        "column_CYVMYD",
+        "column_jtBCEM"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "heading": "Loud, subtle, or somewhere in between — wear what feels like you.",
+        "button_label": "Shop All",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "featured_product_xFLRFH": {
+      "type": "featured-product",
+      "blocks": {
+        "tags_fUrAiQ": {
+          "type": "tags",
+          "settings": {}
+        },
+        "title_TwyTjG": {
+          "type": "title",
+          "settings": {}
+        },
+        "price_T4rBYh": {
+          "type": "price",
+          "settings": {}
+        },
+        "text_Gkc3CM": {
+          "type": "text",
+          "settings": {
+            "text": "This eye-catching necklace features rich wooden beads paired with a bold, playful flower pendant"
+          }
+        },
+        "variant_picker_zckC7k": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "product_variant_type": "color",
+            "show_size_guide": true,
+            "size_guide_header": "Header",
+            "size_guide_decription": "",
+            "size_guide_text": "Size Guide"
+          }
+        },
+        "buy_buttons_jkYm3T": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_quantity": true,
+            "show_gift_card_recipient": false,
+            "notification_modal": true,
+            "modal_button_label": "Notify Me",
+            "heading": "Some heading",
+            "text": "<p>Some text</p>",
+            "button_label": "Customer Care",
+            "button_link": "",
+            "text_bottom": "<p>Some text</p>",
+            "button_label_2": "View Similar Products",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "tags_fUrAiQ",
+        "title_TwyTjG",
+        "price_T4rBYh",
+        "text_Gkc3CM",
+        "variant_picker_zckC7k",
+        "buy_buttons_jkYm3T"
+      ],
+      "settings": {
+        "section_header_type": "type2",
+        "enable_border_top": true,
+        "subheading": "Featured Product",
+        "heading": "Explore Our Featured Product",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "product": "",
+        "image_ratio": "square",
+        "show_three": true,
+        "swipe_on_mobile": true,
+        "margin_top": "l",
+        "margin_bottom": "l"
+      }
+    },
+    "slideshow_Vh7yr7": {
+      "type": "slideshow",
+      "blocks": {
+        "slideshow_item_AUJ8VU": {
+          "type": "slideshow_item",
+          "settings": {
+            "color_scheme": "",
+            "subheading": "Modern Essentials",
+            "heading": "Seasonal Essentials",
+            "heading_tag": "h1",
+            "text": "<p>Update your style with standout pieces from our latest collection. Bold, sleek, and versatile for every occasion.</p>",
+            "button_label": "Explore Campaign",
+            "button_link": "",
+            "button_style": "primary",
+            "button_arrow": false,
+            "overlay_opacity": 20,
+            "article": ""
+          }
+        },
+        "slideshow_item_K86eJL": {
+          "type": "slideshow_item",
+          "settings": {
+            "color_scheme": "",
+            "subheading": "Bold Statements",
+            "heading": "Fresh Finds",
+            "heading_tag": "h1",
+            "text": "<p>Discover the latest styles designed to elevate your look. Perfect for every moment, bold and versatile.</p>",
+            "button_label": "Explore Campaign",
+            "button_link": "",
+            "button_style": "primary",
+            "button_arrow": false,
+            "overlay_opacity": 20,
+            "article": ""
+          }
+        },
+        "slideshow_item_JHRrUf": {
+          "type": "slideshow_item",
+          "settings": {
+            "color_scheme": "",
+            "subheading": "Timeless Appeal",
+            "heading": "Timeless Staples",
+            "heading_tag": "h1",
+            "text": "<p>Refresh your wardrobe with classic pieces that never go out of style. Effortlessly bold, versatile, and ready for any occasion.</p>",
+            "button_label": "Explore Campaign",
+            "button_link": "",
+            "button_style": "primary",
+            "button_arrow": false,
+            "overlay_opacity": 20,
+            "article": ""
+          }
+        }
+      },
+      "block_order": [
+        "slideshow_item_AUJ8VU",
+        "slideshow_item_K86eJL",
+        "slideshow_item_JHRrUf"
+      ],
+      "settings": {
+        "section_header_type": "type1",
+        "enable_border_top": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "section_layout": "container",
+        "section_alignment": "center",
+        "vertical_alignment": "center",
+        "container_size": "small",
+        "image_size": "small",
+        "transition_effect": "stretch",
+        "is_autoplay": true,
+        "show_pagination": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "margin_top": "no-indent",
+        "margin_bottom": "l"
+      }
+    },
+    "featured-blogs": {
+      "type": "featured-blogs",
+      "blocks": {
+        "block-1": {
+          "type": "article_block",
+          "settings": {
+            "article": ""
+          }
+        },
+        "block-2": {
+          "type": "article_block",
+          "settings": {
+            "article": ""
+          }
+        },
+        "block-3": {
+          "type": "article_block",
+          "settings": {
+            "article": ""
+          }
+        },
+        "article_block_bYPhmW": {
+          "type": "article_block",
+          "settings": {
+            "article": ""
+          }
+        },
+        "block-4": {
+          "type": "article_block",
+          "settings": {
+            "article": ""
+          }
+        }
+      },
+      "block_order": [
+        "block-1",
+        "block-2",
+        "block-3",
+        "article_block_bYPhmW",
+        "block-4"
+      ],
+      "settings": {
+        "section_header_type": "type2",
+        "show_arrows": true,
+        "enable_border_top": true,
+        "subheading": "Stories",
+        "heading": "Explore Our Stories",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "Read All Stories",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "section_layout": "slider",
+        "slider_per_row": 3,
+        "is_autoplay": false,
+        "slider_speed": 1.1,
+        "slider_delay": 3,
+        "card_type": "overlay",
+        "hover_effect": "blur",
+        "show_image": true,
+        "show_tags": false,
+        "show_date": true,
+        "show_author": true,
+        "show_excerpt": true,
+        "show_btn": false,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "margin_top": "no-indent",
+        "margin_bottom": "l"
+      }
+    }
+  },
+  "order": [
+    "collection_grid_qqXWaA",
+    "custom_liquid_NUyBHY",
+    "hero_section_ry4mym",
+    "popular-products",
+    "slideshow_HwecET",
+    "collapsible_with_image_B4WWqq",
+    "grid_banner_cYYmL7",
+    "popular_products_EpxFXV",
+    "ticker_with_content_QMbU7j",
+    "products_with_image_fMQXfa",
+    "parallax_gallery_6UexAm",
+    "featured_product_xFLRFH",
+    "slideshow_Vh7yr7",
+    "featured-blogs"
+  ]
+}

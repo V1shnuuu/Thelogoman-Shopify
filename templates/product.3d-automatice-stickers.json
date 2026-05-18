@@ -1,0 +1,406 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "tags": {
+          "type": "tags",
+          "settings": {
+            "enable_tag_link": false
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "text": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": ""
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "description_heading": ""
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "product_variant_type": "color",
+            "show_size_guide": true,
+            "size_guide_header": "Size Chart",
+            "size_guide_decription": "",
+            "size_guide_text": "Size Guide",
+            "page": "size-chart",
+            "enable_linked_products_color": false,
+            "enable_default_image": false,
+            "enable_linked_products_option": false,
+            "linked_product_option_title": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_quantity": true,
+            "show_gift_card_recipient": false,
+            "notification_modal": true,
+            "modal_button_label": "Notify Me",
+            "heading": "Notification",
+            "text": "<p>The product is unfortunately out of stock. Please contact us to let us know when it is available.</p>",
+            "button_label": "Contact Us",
+            "button_link": "",
+            "text_bottom": "<p>We suggest you check out similar products, maybe you will find something suitable for you.</p>",
+            "button_label_2": "View Similar Products",
+            "button_link_2": ""
+          }
+        },
+        "about-1": {
+          "type": "about",
+          "disabled": true,
+          "settings": {
+            "about_heading": "About This Product",
+            "about_heading_content": "<p>This section provides a detailed look into the product's features, benefits, and story. Learn what makes it unique and why it's the right choice for you.</p>"
+          }
+        },
+        "about-2": {
+          "type": "about",
+          "disabled": true,
+          "settings": {
+            "about_heading": "About This Product",
+            "about_heading_content": "<p>This section provides a detailed look into the product's features, benefits, and story. Learn what makes it unique and why it's the right choice for you.</p>"
+          }
+        },
+        "about-3": {
+          "type": "about",
+          "disabled": true,
+          "settings": {
+            "about_heading": "About This Product",
+            "about_heading_content": "<p>This section provides a detailed look into the product's features, benefits, and story. Learn what makes it unique and why it's the right choice for you.</p>"
+          }
+        },
+        "inventory_yccUiU": {
+          "type": "inventory",
+          "settings": {}
+        },
+        "popup_4ce9fn": {
+          "type": "popup",
+          "settings": {
+            "label": "Details",
+            "heading": "Product Details",
+            "text": "<p>Color:</p>{{ product.metafields.shopify[\"color-pattern\"] | metafield_tag: field: 'label' }}<p>Weight:  {{ product.metafields.custom.weight.value }}</p><p>Dimension:  </p>{{ product.metafields.custom.dimension | metafield_tag }}<p>Details:</p>{{ product.metafields.custom.details | metafield_tag }}<p></p>",
+            "text_bottom": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_arrow": false,
+            "secondary_button_enable": false,
+            "secondary_button_label": "Button label",
+            "secondary_button_link": "",
+            "secondary_button_style": "primary",
+            "secondary_button_arrow": false
+          }
+        },
+        "popup_9dffTg": {
+          "type": "popup",
+          "disabled": true,
+          "settings": {
+            "label": "Shipping",
+            "heading": "Shipping",
+            "text": "",
+            "text_bottom": "",
+            "button_label": "Contact Us",
+            "button_link": "",
+            "button_style": "primary",
+            "button_arrow": false,
+            "secondary_button_enable": false,
+            "secondary_button_label": "Button label",
+            "secondary_button_link": "",
+            "secondary_button_style": "primary",
+            "secondary_button_arrow": false
+          }
+        },
+        "complementary_6kdrVb": {
+          "type": "complementary",
+          "settings": {
+            "product_list_limit": 3,
+            "show_secondary_image": true,
+            "image_ratio": "portrait",
+            "image_fit": "cover"
+          }
+        }
+      },
+      "block_order": [
+        "tags",
+        "title",
+        "text",
+        "price",
+        "description",
+        "variant_picker",
+        "buy_buttons",
+        "about-1",
+        "about-2",
+        "about-3",
+        "inventory_yccUiU",
+        "popup_4ce9fn",
+        "popup_9dffTg",
+        "complementary_6kdrVb"
+      ],
+      "settings": {
+        "image_gallery_collage": "thumbnail_carousel",
+        "desktop_alignment": "left",
+        "mobile_alignment": "after",
+        "image_fit": "contain",
+        "enable_autoheight": true,
+        "content_centered": true,
+        "variant_media_display": "show_all",
+        "padding_top": "s",
+        "padding_bottom": "l"
+      }
+    },
+    "image_with_text_kpTWDj": {
+      "type": "image-with-text",
+      "blocks": {
+        "column_wDMikP": {
+          "type": "column",
+          "settings": {
+            "heading": "Visual Impact",
+            "heading_tag": "h5"
+          }
+        },
+        "column_wAQxra": {
+          "type": "column",
+          "settings": {
+            "heading": "Visual Impact",
+            "heading_tag": "h5"
+          }
+        },
+        "column_VezFRa": {
+          "type": "column",
+          "settings": {
+            "heading": "Visual Impact",
+            "heading_tag": "h5"
+          }
+        }
+      },
+      "block_order": [
+        "column_wDMikP",
+        "column_wAQxra",
+        "column_VezFRa"
+      ],
+      "settings": {
+        "blocks_type": "type2",
+        "image_position": "image_left",
+        "color_scheme": "background-3",
+        "image_ratio": "landscape",
+        "subheading_secondary": "Intro",
+        "heading": "",
+        "heading_tag": "h2",
+        "text": "<p>Use this space to give more details about what’s being shown in the image—this could be product specifications, an event highlight, or an introduction to a collection.</p>",
+        "margin_top": "no-indent",
+        "margin_bottom": "l",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "grid_banner_cYYmL7": {
+      "type": "grid-banner",
+      "blocks": {
+        "column_TgMGg7": {
+          "type": "column",
+          "settings": {
+            "overlay_opacity": 4,
+            "heading": "Short Tagline",
+            "heading_size": "h3",
+            "heading_tag": "h2",
+            "text": "<p>This is where you can describe what makes this banner important, guiding visitors to take action or explore more.</p>",
+            "button_label": "Shop Now",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": true,
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "column_xttm94": {
+          "type": "column",
+          "settings": {
+            "overlay_opacity": 0,
+            "heading": "Short Tagline",
+            "heading_size": "h3",
+            "heading_tag": "h2",
+            "text": "<p>This is where you can describe what makes this banner important, guiding visitors to take action or explore more.</p>",
+            "button_label": "Shop Now",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": true,
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "column_Xzd3eB": {
+          "type": "column",
+          "settings": {
+            "overlay_opacity": 0,
+            "heading": "Short Tagline",
+            "heading_size": "h3",
+            "heading_tag": "h2",
+            "text": "<p>This is where you can describe what makes this banner important, guiding visitors to take action or explore more.</p>",
+            "button_label": "Shop Now",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": true,
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        }
+      },
+      "block_order": [
+        "column_TgMGg7",
+        "column_xttm94",
+        "column_Xzd3eB"
+      ],
+      "settings": {
+        "columns": 3,
+        "color_scheme": "",
+        "section_header_type": "type2",
+        "enable_border_top": false,
+        "subheading": "Banners",
+        "heading": "Explore Our Favorites",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "image_ratio": "portrait",
+        "text_horizontal": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "l",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "image-banner": {
+      "type": "image-banner",
+      "settings": {
+        "section_layout": "full",
+        "color_scheme": "",
+        "image_size": "small",
+        "overlay_opacity": 10,
+        "subheading": "Feature your content",
+        "heading": "Banner Title",
+        "heading_second": "",
+        "heading_size": "h2",
+        "description": "<p> Use this space to highlight what matters most—whether it’s a new launch, a seasonal promotion, or your brand’s mission.</p>",
+        "desc_size": "medium-font",
+        "button_label": "Learn More",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "margin_top": "no-indent",
+        "margin_bottom": "l"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "products_to_show": 8,
+        "per_row": 4,
+        "section_header_type": "type2",
+        "subheading": "Our Picks",
+        "heading": "You May Be Interested",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "description": "",
+        "enable_border_top": true,
+        "button_label": "Explore Now",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "show_two_cards": true,
+        "autoplay": false,
+        "stop_autoplay": true,
+        "show_arrows": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "show_sku": false,
+        "show_vendor": false,
+        "show_collection_name": false,
+        "show_color_swatch": true,
+        "product_variant_type": "color",
+        "show_desc": false,
+        "margin_top": "no-indent",
+        "margin_bottom": "l"
+      }
+    },
+    "popular_products_YNhnAE": {
+      "type": "popular-products",
+      "settings": {
+        "product_list": [],
+        "per_row": 4,
+        "section_header_type": "type2",
+        "mobile_slider_grid_layout": "slider",
+        "heading": "Top Picks Preview",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "subheading": "Bestsellers",
+        "description": "",
+        "enable_border_top": true,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "autoplay": false,
+        "stop_autoplay": true,
+        "show_arrows": false,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "show_two_cards": true,
+        "show_sku": false,
+        "show_vendor": false,
+        "show_collection_name": false,
+        "show_color_swatch": false,
+        "product_variant_type": "color",
+        "show_desc": false,
+        "margin_top": "no-indent",
+        "margin_bottom": "l"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_kpTWDj",
+    "grid_banner_cYYmL7",
+    "image-banner",
+    "product-recommendations",
+    "popular_products_YNhnAE"
+  ]
+}
