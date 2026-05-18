@@ -187,9 +187,14 @@
 																				{%- assign property_first_char = property.first
 																					| slice: 0
 																				-%}
-																				{%- if property.last != blank
-																					and property_first_char != '_'
-																				-%}
+																				{%- assign show_property = true -%}
+																				{%- if property_first_char == '_' -%}
+																					{%- assign show_property = false -%}
+																					{%- if property.last contains '/uploads/' -%}
+																						{%- assign show_property = true -%}
+																					{%- endif -%}
+																				{%- endif -%}
+																				{%- if property.last != blank and show_property -%}
 																					<div class="product-option small-font">
 																						<dt>{{ property.first }}:</dt>
 																						<dd>
@@ -498,9 +503,14 @@
 																				{%- assign property_first_char = property.first
 																					| slice: 0
 																				-%}
-																				{%- if property.last != blank
-																					and property_first_char != '_'
-																				-%}
+																				{%- assign show_property = true -%}
+																				{%- if property_first_char == '_' -%}
+																					{%- assign show_property = false -%}
+																					{%- if property.last contains '/uploads/' -%}
+																						{%- assign show_property = true -%}
+																					{%- endif -%}
+																				{%- endif -%}
+																				{%- if property.last != blank and show_property -%}
 																					<div class="product-option small-font">
 																						<dt>{{ property.first }}:</dt>
 																						<dd>
