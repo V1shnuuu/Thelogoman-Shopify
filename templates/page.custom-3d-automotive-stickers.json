@@ -11,7 +11,9 @@
   "sections": {
     "main": {
       "type": "custom-3d-automotive-stickers",
-      "settings": {}
+      "settings": {
+        "product": ""
+      }
     }
   },
   "order": [
