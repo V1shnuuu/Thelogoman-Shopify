@@ -49,7 +49,7 @@
         {% endif %}
 
         <!-- Product Form -->
-        <form id="product-form" action="/cart/add" method="post" enctype="multipart/form-data" class="product-form">
+        <form id="product-form" action="{{ shop.secure_url }}/cart/add" method="post" enctype="multipart/form-data" class="product-form">
           {% if product == empty %}
             <div style="background: rgba(255, 75, 75, 0.15); border: 1px solid #ff4b4b; color: #ff6b6b; padding: 16px; border-radius: 8px; margin-bottom: 20px; font-size: 14px; line-height: 1.4;">
               <strong>⚠️ Product Link Required:</strong> No custom sticker product is currently linked to this page. Please open your Shopify Theme Editor (Customizer), select this section, and pick your custom product in the settings!
