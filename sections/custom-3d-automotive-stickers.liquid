@@ -7,6 +7,9 @@
 
 {%- assign product = all_products[section.settings.product] -%}
 {%- if product == empty -%}
+  {%- assign product = all_products['custom-3d-sticker'] -%}
+{%- endif -%}
+{%- if product == empty -%}
   {%- assign product = all_products['3d-automotive-stickers'] -%}
 {%- endif -%}
 {%- if product == empty -%}
