@@ -202,11 +202,14 @@
 																									target="_blank"
 																									aria-describedby="a11y-new-window-message"
 																								>
-																									{{
-																										property.last
-																										| split: '/'
-																										| last
-																									}}
+																									<img src="{{ property.last }}" alt="Uploaded sticker design" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); display: block; margin-top: 8px; margin-bottom: 4px;">
+																									<span style="font-size: 11px; opacity: 0.7;">
+																										{{
+																											property.last
+																											| split: '/'
+																											| last
+																										}}
+																									</span>
 																								</a>
 																							{%- else -%}
 																								{{ property.last }}
@@ -510,11 +513,14 @@
 																									target="_blank"
 																									aria-describedby="a11y-new-window-message"
 																								>
-																									{{
-																										property.last
-																										| split: '/'
-																										| last
-																									}}
+																									<img src="{{ property.last }}" alt="Uploaded sticker design" style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); display: block; margin-top: 8px; margin-bottom: 4px;">
+																									<span style="font-size: 11px; opacity: 0.7;">
+																										{{
+																											property.last
+																											| split: '/'
+																											| last
+																										}}
+																									</span>
 																								</a>
 																							{%- else -%}
 																								{{ property.last }}
