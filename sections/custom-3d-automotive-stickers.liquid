@@ -7,10 +7,16 @@
 
 {%- assign product = all_products[section.settings.product] -%}
 {%- if product == empty -%}
-  {%- assign product = all_products['3d-car-hanging'] -%}
+  {%- assign product = all_products['3d-automotive-stickers'] -%}
 {%- endif -%}
 {%- if product == empty -%}
   {%- assign product = all_products['3d-automatice-stickers'] -%}
+{%- endif -%}
+{%- if product == empty -%}
+  {%- assign product = all_products['3d-car-hanging'] -%}
+{%- endif -%}
+{%- if product == empty -%}
+  {%- assign product = all_products['3d-mobile-stickers'] -%}
 {%- endif -%}
 
 <div class="custom-automotive-stickers">
@@ -41,10 +47,15 @@
 
         <!-- Product Form -->
         <form id="product-form" action="/cart/add" method="post" enctype="multipart/form-data" class="product-form">
-          <input type="hidden" name="id" id="hidden-variant-id" value="{{ product.selected_or_first_available_variant.id }}">
+          {% if product == empty %}
+            <div style="background: rgba(255, 75, 75, 0.15); border: 1px solid #ff4b4b; color: #ff6b6b; padding: 16px; border-radius: 8px; margin-bottom: 20px; font-size: 14px; line-height: 1.4;">
+              <strong>⚠️ Product Link Required:</strong> No custom sticker product is currently linked to this page. Please open your Shopify Theme Editor (Customizer), select this section, and pick your custom product in the settings!
+            </div>
+          {% endif %}
+          <input type="hidden" name="id" id="hidden-variant-id" value="{{ product.selected_or_first_available_variant.id | default: product.variants.first.id }}">
           
           <!-- Variant Selection -->
-          {% if product.available %}
+          {% if product != empty and product.variants.size > 0 %}
             <div class="variant-selector-group">
               <label for="variant-selector" class="form-label">Select Sticker Variant:</label>
               <select 
@@ -52,7 +63,7 @@
                 class="form-select variant-select"
               >
                 {% for variant in product.variants %}
-                  <option value="{{ variant.id }}" data-price="{{ variant.price | money }}" {% if variant == product.selected_or_first_available_variant %}selected{% endif %}>
+                  <option value="{{ variant.id }}" data-price="{{ variant.price | money }}" {% if variant == product.selected_or_first_available_variant or variant == product.variants.first %}selected{% endif %}>
                     {{ variant.title }} - {{ variant.price | money }}
                   </option>
                 {% endfor %}
