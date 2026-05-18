@@ -356,21 +356,23 @@
       });
     }
 
-    // Intercept form submission for validation, logging, and AJAX post
+    // Intercept form submission for validation and logging
     if (productForm) {
       productForm.addEventListener('submit', function(e) {
-        e.preventDefault(); // Prevent standard page reload
-
         // Validation
         const variantId = hiddenVariantIdInput ? hiddenVariantIdInput.value : '';
         if (!variantId) {
+          e.preventDefault();
           alert('Error: No variant selected.');
           return;
         }
         if (isNaN(variantId)) {
+          e.preventDefault();
           alert('Error: Selected variant ID is not numeric.');
           return;
         }
+
+        console.log("Selected variant ID:", variantId);
 
         const formData = new FormData(productForm);
 
@@ -380,30 +382,7 @@
           console.log(pair[0] + ': ' + pair[1]);
         }
 
-        // AJAX POST to /cart/add.js
-        fetch('/cart/add.js', {
-          method: 'POST',
-          body: formData
-        })
-        .then(response => {
-          if (!response.ok) {
-            return response.json().then(err => { throw new Error(err.description || 'Failed to add to cart'); });
-          }
-          return response.json();
-        })
-        .then(data => {
-          console.log('Success adding to cart:', data);
-          
-          // Dispatch a cart change event to open AJAX cart drawers if they exist
-          document.dispatchEvent(new CustomEvent('cart:updated', { bubbles: true }));
-          
-          // Redirect to cart
-          window.location.href = '/cart';
-        })
-        .catch(error => {
-          console.error('Error adding to cart:', error);
-          alert(error.message || 'Error adding item to cart. Please try again.');
-        });
+        // Native form submission will execute seamlessly, redirecting to /cart
       });
     }
 
