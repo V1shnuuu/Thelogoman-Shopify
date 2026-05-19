@@ -112,32 +112,25 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "footer-4": {
+          "type": "store_info",
+          "settings": {
+            "text": "<p><strong>Address: </strong>59/32, Old Amaranjipuram,Royapuram, Chennai - 600013.<br/><strong>Mail Id:</strong> crew@thelogoman.in<br/><strong>Contact no:</strong> +91-7222000177</p>",
+            "alignment": "left"
+          }
+        },
         "footer-1": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "Company",
             "menu": "footer"
           }
         },
         "footer-2": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
-          }
-        },
-        "footer-3": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
-          }
-        },
-        "footer-4": {
-          "type": "store_info",
-          "settings": {
-            "text": "<p>This section can showcase a quick summary of what your store offers, such as premium products, customer service, or brand values.</p>",
-            "alignment": "center"
+            "heading": "Follow Us",
+            "menu": "contact"
           }
         },
         "footer-5": {
@@ -154,10 +147,9 @@
         }
       },
       "block_order": [
+        "footer-4",
         "footer-1",
         "footer-2",
-        "footer-3",
-        "footer-4",
         "footer-5"
       ],
       "settings": {

@@ -23,37 +23,45 @@
         "categories_DDyVGE": {
           "type": "categories",
           "settings": {
-            "product": "",
+            "product": "iron-man-yellow-3d-mobile-phone-sticker",
             "image_ratio": "portrait",
-            "heading": "Heading",
-            "description": "<p>Description</p>"
+            "image": "shopify://shop_images/Screenshot_2026-05-19_141645.png",
+            "heading": "",
+            "heading_tag": "h2",
+            "description": ""
           }
         },
         "categories_p8cBJw": {
           "type": "categories",
           "settings": {
-            "product": "",
+            "product": "batma-n-and-joker-radium-3d-car-hanging",
             "image_ratio": "portrait",
-            "heading": "Heading",
-            "description": "<p>Description</p>"
+            "image": "shopify://shop_images/Screenshot_2026-05-19_141742.png",
+            "heading": "",
+            "heading_tag": "h2",
+            "description": ""
           }
         },
         "categories_CeK7pk": {
           "type": "categories",
           "settings": {
-            "product": "",
+            "product": "karma-unisex-cotton-t-shirt",
             "image_ratio": "portrait",
-            "heading": "Heading",
-            "description": "<p>Description</p>"
+            "image": "shopify://shop_images/ChatGPT_Image_May_14_2026_06_47_20_PM.png",
+            "heading": "",
+            "heading_tag": "h2",
+            "description": ""
           }
         },
         "categories_bhyEjU": {
           "type": "categories",
           "settings": {
-            "product": "",
+            "product": "heise-nberg-3d-car-hanging",
             "image_ratio": "portrait",
-            "heading": "Heading",
-            "description": "<p>Description</p>"
+            "image": "shopify://shop_images/Screenshot_2026-05-19_142353.png",
+            "heading": "",
+            "heading_tag": "h2",
+            "description": ""
           }
         }
       },
@@ -67,6 +75,8 @@
         "scroll_type": true,
         "subheading": "",
         "heading": "Lookbook",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
         "description": "",
         "enable_border_top": true,
         "button_label": "",
@@ -83,14 +93,14 @@
         "text_7HihG3": {
           "type": "text",
           "settings": {
-            "text": "<p>Description for your section.</p>"
+            "text": "<p>Thousands of customers have transformed their logos, names, and designs into stunning custom products. Browse our Lookbook to see what’s possible and get inspired for your own creation.</p>"
           }
         },
         "button_zDM8Uj": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
+            "button_label": "All Products",
+            "button_link": "https://thelogoman-2.myshopify.com/collections/all",
             "button_style": "tertiary",
             "button_arrow": true
           }

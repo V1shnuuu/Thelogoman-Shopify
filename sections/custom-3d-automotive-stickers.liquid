@@ -13,9 +13,6 @@
   {%- assign product = all_products['3d-automotive-stickers'] -%}
 {%- endif -%}
 {%- if product == empty -%}
-  {%- assign product = all_products['3d-automatice-stickers'] -%}
-{%- endif -%}
-{%- if product == empty -%}
   {%- assign product = all_products['3d-car-hanging'] -%}
 {%- endif -%}
 {%- if product == empty -%}
@@ -380,6 +377,10 @@
         console.log("FormData entries:");
         for (let pair of formData.entries()) {
           console.log(pair[0] + ': ' + pair[1]);
+        }
+
+        if (window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost') {
+          productForm.action = 'https://thelogoman-2.myshopify.com/cart/add';
         }
 
         // Native form submission will execute seamlessly, redirecting to /cart

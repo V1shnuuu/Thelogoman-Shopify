@@ -23,36 +23,36 @@
         "text_block_nRJ9EC": {
           "type": "text-block",
           "settings": {
-            "heading": "Heading",
-            "description": "<p>Description</p>"
+            "heading": "Can I customize my own design?",
+            "description": "<p>Absolutely! You can upload your logo, name, or artwork, and we’ll turn it into a premium custom product.</p>"
           }
         },
         "text_block_3NPVTn": {
           "type": "text-block",
           "settings": {
-            "heading": "Heading",
-            "description": "<p>Description</p>"
+            "heading": "Are your products waterproof and weather-resistant?",
+            "description": "<p>Yes. Most of our automotive badges, stickers, and hanging accessories are designed to withstand everyday weather conditions.</p>"
           }
         },
         "text_block_wCW4jM": {
           "type": "text-block",
           "settings": {
-            "heading": "Heading",
-            "description": "<p>Description</p>"
+            "heading": "Can I return or exchange customized products?",
+            "description": "<p>Since each product is made to order, customized items are generally non-returnable unless there is a manufacturing defect or damage during transit.</p>"
           }
         },
         "text_block_VhhaBp": {
           "type": "text-block",
           "settings": {
-            "heading": "Heading",
-            "description": "<p>Description</p>"
+            "heading": "Can you recreate my logo if I only have a photo?",
+            "description": "<p>Yes. Our design team can recreate your logo from a reference image or sketch.</p>"
           }
         },
         "text_block_b4P4Uh": {
           "type": "text-block",
           "settings": {
-            "heading": "Heading",
-            "description": "<p>Description</p>"
+            "heading": "Why choose The Logo Man?",
+            "description": "<p>We combine creativity, premium materials, and expert craftsmanship to turn your ideas into standout custom products.</p>"
           }
         }
       },
@@ -64,6 +64,8 @@
         "text_block_b4P4Uh"
       ],
       "settings": {
+        "faqs_heading": "",
+        "faqs_desc": "",
         "color_scheme": "background-1",
         "show_image_content": false,
         "subheading": "Subheading",
