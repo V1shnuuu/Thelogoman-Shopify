@@ -20,11 +20,13 @@
 						{{ section.settings.description }}
 					</div>
 				{% endif %}
+				{% comment %}
 				{% if section.settings.description_secondary != blank %}
 					<div class="about__box-desc  richtext__content">
 						{{ section.settings.description_secondary }}
 					</div>
 				{% endif %}
+				{% endcomment %}
 			</div>
 		</div>
 	</div>
@@ -55,12 +57,6 @@
 			"id": "description",
 			"default": "t:sections.about.settings.description.default",
 			"label": "t:sections.all.description.label"
-		},
-		{
-			"type": "richtext",
-			"id": "description_secondary",
-			"default": "t:sections.about.settings.description_secondary.default",
-			"label": "t:sections.all.description_secondary.label"
 		},
 		{
 			"type": "header",
