@@ -30,93 +30,20 @@
     },
     "about_CkiXEc": {
       "type": "about",
+      "custom_css": [
+        "/* Hide the \"Description secondary\" field in the Shopify editor */[data-setting-id=\"description_secondary\"]{display:none !important;}",
+        "/* Hide the second description on the storefront */.about .rte:last-of-type{display:none !important;}",
+        "/* Make the first description take full width */.about .rich-text__blocks,.about .rich-text__text,.about .rte:first-of-type{width:100% !important; max-width:100% !important; display:block !important;}"
+      ],
       "settings": {
         "color_scheme": "background-1",
         "heading": "THELOGOMAN",
-        "description": "<h4><strong>When they hear the name ‘The Logo Man’ the thing which comes to the customer mind is 3D Logos and Unique Creative designs. </strong></h4><p>What sets The Logo Man apart is our ability to blend innovative design with premium craftsmanship. Every product is created with modern styling, exceptional detailing, and a distinctive finish that instantly stands out.</p><p>Customers choose The Logo Man for custom creations that are memorable, eye-catching, and truly unique—products that reflect their personality, elevate their brand, and leave a lasting impression. From personalized 3D logos to premium custom products, every creation is thoughtfully designed to turn ideas into bold statement.</p>",
-        "description_secondary": "<h4><strong>Your vision transformed into a premium custom creation with precision to stand out and a truly unforgettable finish</strong><br/></h4><p>The Logo Man transforms your ideas into premium custom products that are as unique as you are. From personalized 3D logos and automotive badges to custom keychains, stickers, every order is designed from scratch to match your vision.</p><p>Combining originality, modern styling, and expert craftsmanship, we create visually striking products that stand out from the ordinary. Every custom order is crafted with premium materials and exceptional attention to detail to deliver a truly memorable finish.  we ensure every piece reflects your vision with quality and precision.<br/><br/></p>",
+        "description": "<h4>When they hear the name ‘The Logo Man’ the thing which comes to the customer mind is 3D Logos and Unique Creative designs.</h4><p> What sets The Logo Man apart is our ability to blend innovative design with premium craftsmanship. Every product is created with modern styling, exceptional detailing, and a distinctive finish that instantly stands out.</p><p>Customers choose The Logo Man for custom creations that are memorable, eye-catching, and truly unique—products that reflect their personality, elevate their brand, and leave a lasting impression. From personalized 3D logos to premium custom products, every creation is thoughtfully designed to turn ideas into bold </p>",
+        "description_secondary": "",
         "margin_top": "no-indent",
-        "margin_bottom": "l",
+        "margin_bottom": "no-indent",
         "padding_top": "l",
-        "padding_bottom": "l"
-      }
-    },
-    "tabs_nrwDTL": {
-      "type": "tabs",
-      "blocks": {
-        "tab_764YAg": {
-          "type": "tab",
-          "settings": {
-            "heading": "COMMUNITY",
-            "subheading": "",
-            "description": "The Logo Man community is built on creativity, individuality, and confidence. Every piece is designed to help people express their identity through bold details, premium styling, and standout fashion.",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "tertiary",
-            "button_arrow": true
-          }
-        },
-        "tab_pXcDzd": {
-          "type": "tab",
-          "settings": {
-            "heading": "STREET CULTURE",
-            "subheading": "",
-            "description": "Inspired by modern streetwear and urban culture, The Logo Man blends originality with everyday style. Each collection reflects energy, attitude, and the spirit of self-expression.",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "tertiary",
-            "button_arrow": true
-          }
-        },
-        "tab_EAPif8": {
-          "type": "tab",
-          "settings": {
-            "heading": "BRAND VISION",
-            "subheading": "",
-            "description": "The Logo Man creates statement pieces that combine premium craftsmanship, modern aesthetics, and creative design. Our vision is to build a brand customers instantly recognize and remember.",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "tertiary",
-            "button_arrow": true
-          }
-        },
-        "tab_YkhX7A": {
-          "type": "tab",
-          "settings": {
-            "heading": "BEYOND BORDERS",
-            "subheading": "",
-            "description": "From local streets to global fashion culture, The Logo Man connects people through originality and creativity. Every design is made to stand out across trends, styles, and communities worldwide.",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "tertiary",
-            "button_arrow": true
-          }
-        }
-      },
-      "block_order": [
-        "tab_764YAg",
-        "tab_pXcDzd",
-        "tab_EAPif8",
-        "tab_YkhX7A"
-      ],
-      "settings": {
-        "section_header_type": "type2",
-        "enable_border_top": true,
-        "subheading": "",
-        "heading": "INNOVATION IS OUR COMPASS ALWAYS REFINED WE DESIGN TO INSPIRE ORIGINAL THINKING",
-        "heading_tag": "h2",
-        "description": "",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "button_arrow": false,
-        "blocks_type": "type1",
-        "is_autoplay": true,
-        "slider_speed": 1.1,
-        "slider_delay": 3,
-        "slide_effects": "fade",
-        "margin_top": "no-indent",
-        "margin_bottom": "l"
+        "padding_bottom": "no-indent"
       }
     },
     "parallax_gallery_mD4pa9": {
@@ -179,156 +106,13 @@
         "padding_top": "no-indent",
         "padding_bottom": "no-indent"
       }
-    },
-    "grid_banner_9DRrpt": {
-      "type": "grid-banner",
-      "blocks": {
-        "column_AdfdeF": {
-          "type": "column",
-          "settings": {
-            "overlay_opacity": 20,
-            "heading": "Heading",
-            "heading_size": "h5",
-            "heading_tag": "h2",
-            "text": "<p>Some text</p>",
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style": "tertiary",
-            "button_arrow": true,
-            "column_start": 1,
-            "column_end": 2,
-            "row_start": "unset",
-            "row_end": "unset"
-          }
-        },
-        "column_Nzt3kK": {
-          "type": "column",
-          "settings": {
-            "overlay_opacity": 20,
-            "heading": "Heading",
-            "heading_size": "h5",
-            "heading_tag": "h2",
-            "text": "<p>Some text</p>",
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style": "tertiary",
-            "button_arrow": true,
-            "column_start": 2,
-            "column_end": 3,
-            "row_start": "unset",
-            "row_end": "unset"
-          }
-        },
-        "column_gj3yRP": {
-          "type": "column",
-          "settings": {
-            "overlay_opacity": 20,
-            "heading": "Heading",
-            "heading_size": "h5",
-            "heading_tag": "h2",
-            "text": "<p>Some text</p>",
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style": "tertiary",
-            "button_arrow": true,
-            "column_start": 3,
-            "column_end": 4,
-            "row_start": "unset",
-            "row_end": "unset"
-          }
-        }
-      },
-      "block_order": [
-        "column_AdfdeF",
-        "column_Nzt3kK",
-        "column_gj3yRP"
-      ],
-      "settings": {
-        "columns": 3,
-        "color_scheme": "background-1",
-        "section_header_type": "type2",
-        "enable_border_top": false,
-        "subheading": "",
-        "heading": "Heading",
-        "heading_tag": "h2",
-        "description": "<p>Description</p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "button_arrow": false,
-        "image_ratio": "portrait",
-        "text_horizontal": "left",
-        "margin_top": "no-indent",
-        "margin_bottom": "l",
-        "padding_top": "no-indent",
-        "padding_bottom": "no-indent"
-      }
-    },
-    "collapsible_content_Wrtpm3": {
-      "type": "collapsible-content",
-      "blocks": {
-        "text_block_HdNnrr": {
-          "type": "text-block",
-          "settings": {
-            "heading": "How do I place a custom order?",
-            "description": "<p>Choose your product, upload your design or share your idea, and place your order. Our team will handle the rest.<br/><br/></p>"
-          }
-        },
-        "text_block_6aExFf": {
-          "type": "text-block",
-          "settings": {
-            "heading": "WHAT MAKES YOUR PRODUCTS UNIQUE?",
-            "description": "<p>Our products are designed with originality, premium craftsmanship, and modern street-inspired aesthetics to create pieces that stand out.</p>"
-          }
-        },
-        "text_block_qNGHLq": {
-          "type": "text-block",
-          "settings": {
-            "heading": "WHAT MATERIALS ARE USED IN YOUR PRODUCTS?",
-            "description": "<p>We use high-quality acrylic, ABS, metal-finish materials, vinyl, and durable adhesives to ensure a premium look and long-lasting finish.<br/><br/></p>"
-          }
-        },
-        "text_block_UjLbGE": {
-          "type": "text-block",
-          "settings": {
-            "heading": "CAN I RETURN OR EXCHANGE A PRODUCT?",
-            "description": "<p>Yes, returns and exchanges are accepted within the eligible return period, provided the item is unused and in original condition. </p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_block_HdNnrr",
-        "text_block_6aExFf",
-        "text_block_qNGHLq",
-        "text_block_UjLbGE"
-      ],
-      "settings": {
-        "faqs_heading": "",
-        "faqs_desc": "",
-        "color_scheme": "",
-        "show_image_content": true,
-        "image": "shopify://shop_images/ChatGPT_Image_May_19_2026_01_25_15_PM.png",
-        "subheading": "Subheading",
-        "heading": "frequently asked questions",
-        "text_animation": true,
-        "description": "",
-        "button_label": "VIEW ALL",
-        "button_link": "https://thelogoman-2.myshopify.com/pages/faq?view=faqs",
-        "button_style": "primary",
-        "button_arrow": false,
-        "margin_top": "no-indent",
-        "margin_bottom": "l"
-      }
     }
   },
   "order": [
     "main",
     "banner_gCnrz3",
     "about_CkiXEc",
-    "tabs_nrwDTL",
     "parallax_gallery_mD4pa9",
-    "image_with_text_HacCWz",
-    "grid_banner_9DRrpt",
-    "collapsible_content_Wrtpm3"
+    "image_with_text_HacCWz"
   ]
 }

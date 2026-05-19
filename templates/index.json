@@ -602,18 +602,21 @@
         "column_JhbcCQ": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_May_18_2026_07_30_14_PM.png",
             "image_ratio": "portrait"
           }
         },
         "column_CYVMYD": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_May_18_2026_07_23_07_PM.png",
             "image_ratio": "square"
           }
         },
         "column_jtBCEM": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_May_19_2026_01_02_41_PM.png",
             "image_ratio": "portrait"
           }
         }
@@ -625,9 +628,9 @@
       ],
       "settings": {
         "color_scheme": "",
-        "heading": "Loud, subtle, or somewhere in between — wear what feels like you.",
+        "heading": "<strong>STYLE YOUR WORLD, YOUR WAY.</strong>",
         "button_label": "Shop All",
-        "button_link": "",
+        "button_link": "shopify://collections",
         "button_style": "primary",
         "button_arrow": false,
         "margin_top": "no-indent",

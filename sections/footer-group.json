@@ -165,8 +165,8 @@
         "show_social": true,
         "copyright_show": true,
         "margin_top": "no-indent",
-        "padding_top": "s",
-        "padding_bottom": "s",
+        "padding_top": "m",
+        "padding_bottom": "m",
         "enable_border_top": true,
         "enable_border_bottom": true
       }
