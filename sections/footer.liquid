@@ -346,7 +346,8 @@
 							<div class="footer__column footer__column--payment">
 								<div class="footer__payment">
 									<ul class="list list-payment" role="list">
-										{%- for type in shop.enabled_payment_types -%}
+										{%- assign manual_payment_types = 'visa,master,american_express,paypal,diners_club,discover' | split: ',' -%}
+										{%- for type in manual_payment_types -%}
 											<li class="list-payment__item">
 												{{
 													type
@@ -367,9 +368,7 @@
 							{{ block.shopify_attributes }}
 						>
 							<div class="footer__localization">
-								{%- if section.settings.enable_country_selector
-									and localization.available_countries.size > 1
-								-%}
+								{%- if section.settings.enable_country_selector -%}
 									<noscript>
 										{%- form 'localization',
 											id: 'FooterCountryFormNoScript',
@@ -470,9 +469,7 @@
 									</localization-form>
 								{%- endif -%}
 
-								{%- if section.settings.enable_language_selector
-									and localization.available_languages.size > 1
-								-%}
+								{%- if section.settings.enable_language_selector -%}
 									<noscript>
 										{%- form 'localization',
 											id: 'FooterLanguageFormNoScript',

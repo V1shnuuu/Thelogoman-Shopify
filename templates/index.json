@@ -301,7 +301,7 @@
         "heading_tag": "h2",
         "description": "",
         "button_label": "Explore Our Story",
-        "button_link": "shopify://collections/3d-mobile-stickers",
+        "button_link": "https://thelogoman-2.myshopify.com/collections/all",
         "button_style": "primary",
         "button_arrow": false,
         "section_layout": "container",
