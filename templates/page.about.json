@@ -31,15 +31,14 @@
     "about_CkiXEc": {
       "type": "about",
       "custom_css": [
-        "/* Hide the \"Description secondary\" field in the Shopify editor */[data-setting-id=\"description_secondary\"]{display:none !important;}",
-        "/* Hide the second description on the storefront */.about .rte:last-of-type{display:none !important;}",
-        "/* Make the first description take full width */.about .rich-text__blocks,.about .rich-text__text,.about .rte:first-of-type{width:100% !important; max-width:100% !important; display:block !important;}"
+        "/* Hide the \"Description secondary\" field in the Shopify editor */[data-setting-id=\"description_secondary\"] {display: none !important;}",
+        " /* Hide the second description on the storefront */.about .rte:last-of-type {display: none !important;}",
+        " /* Make the first description take full width */.about .rich-text__blocks,.about .rich-text__text,.about .rte:first-of-type {width: 100% !important; max-width: 100% !important; display: block !important;}"
       ],
       "settings": {
         "color_scheme": "background-1",
         "heading": "THELOGOMAN",
-        "description": "<h4>When they hear the name ‘The Logo Man’ the thing which comes to the customer mind is 3D Logos and Unique Creative designs.</h4><p> What sets The Logo Man apart is our ability to blend innovative design with premium craftsmanship. Every product is created with modern styling, exceptional detailing, and a distinctive finish that instantly stands out.</p><p>Customers choose The Logo Man for custom creations that are memorable, eye-catching, and truly unique—products that reflect their personality, elevate their brand, and leave a lasting impression. From personalized 3D logos to premium custom products, every creation is thoughtfully designed to turn ideas into bold </p>",
-        "description_secondary": "",
+        "description": "<h4>When they hear the name ‘The Logo Man’ the thing which comes to the customer mind is 3D Logos and Unique Creative designs.</h4><p> At The Logo Man, we believe that every design should be more than just a product—it should be a statement. Our expertise lies in blending creative vision with exceptional craftsmanship to produce customized pieces that are bold, modern, and meticulously detailed. Whether it is a personalized 3D wall logo, a custom car hanging, a branded keychain, or a one-of-a-kind decorative item, every creation is thoughtfully designed to reflect individuality, style, and purpose.</p><p>What sets The Logo Man apart is our unwavering commitment to quality and originality. Each product is crafted using premium materials and finished with precision to ensure a professional and eye-catching result. Our designs are tailored to showcase personal identity, strengthen brand presence, and transform ideas into tangible works of art that leave a lasting impression.</p><p>Customers choose The Logo Man because they want products that truly stand out. From entrepreneurs looking to elevate their brand to individuals searching for meaningful and memorable custom gifts, our creations are designed to be distinctive, impactful, and impossible to ignore.</p><p>From concept to completion, The Logo Man is dedicated to delivering custom creations that combine innovation, craftsmanship, and creativity—bringing your ideas to life in the boldest and most impressive way possible.</p>",
         "margin_top": "no-indent",
         "margin_bottom": "no-indent",
         "padding_top": "l",
@@ -98,11 +97,11 @@
         "image_first": "shopify://shop_images/ChatGPT_Image_May_19_2026_01_04_47_PM.png",
         "image_ratio": "landscape",
         "subheading_secondary": "",
-        "heading": "",
+        "heading": "Designed to Stand Out, Made to Represent You",
         "heading_tag": "h2",
-        "text": "<p><br/>Crafted with intention and driven by originality, every piece reflects bold identity and fearless creativity. Inspired by modern culture and expressive design, these creations are made to stand out while representing confidence, individuality, and powerful self-expression. More than accessories, they symbolize attitude, ambition, and the energy behind every unique story.<br/> <br/></p>",
+        "text": "<p><br/>Crafted with intention and driven by originality, every piece reflects bold identity and fearless creativity. Inspired by modern culture and expressive design, these creations are made to stand out while representing confidence, individuality, and powerful self-expression. More than accessories, they symbolize attitude, ambition, and the energy behind every unique story. <br/><br/><br/> <br/></p>",
         "margin_top": "no-indent",
-        "margin_bottom": "l",
+        "margin_bottom": "s",
         "padding_top": "no-indent",
         "padding_bottom": "no-indent"
       }

@@ -481,7 +481,15 @@
     "popular_products_EpxFXV": {
       "type": "popular-products",
       "settings": {
-        "product_list": [],
+        "product_list": [
+          "black-panther-3d-keychain",
+          "royal-enfield-3d-keychain",
+          "micha-el-jackson-3d-keychain",
+          "maste-r-thalapathy-vijay-3d-keychain",
+          "batma-n-3d-keychain",
+          "ms-dh-oni-3d-keychain",
+          "musta-che-3d-keychain"
+        ],
         "per_row": 4,
         "section_header_type": "type2",
         "mobile_slider_grid_layout": "slider",
@@ -566,6 +574,7 @@
         "product_item_3JT6nD",
         "product_item_Hjg7kR"
       ],
+      "disabled": true,
       "settings": {
         "section_header_type": "type2",
         "enable_border_top": true,
@@ -630,7 +639,7 @@
         "color_scheme": "",
         "heading": "<strong>STYLE YOUR WORLD, YOUR WAY.</strong>",
         "button_label": "Shop All",
-        "button_link": "shopify://collections",
+        "button_link": "https://thelogoman-2.myshopify.com/collections/all",
         "button_style": "primary",
         "button_arrow": false,
         "margin_top": "no-indent",
@@ -657,7 +666,7 @@
         "text_Gkc3CM": {
           "type": "text",
           "settings": {
-            "text": "This eye-catching necklace features rich wooden beads paired with a bold, playful flower pendant"
+            "text": "Bring peace and positivity to every drive with this premium Buddha 3D Car Hanging. A beautifully crafted accessory that symbolizes serenity, protection, and mindful journeys."
           }
         },
         "variant_picker_zckC7k": {
@@ -708,165 +717,11 @@
         "button_link": "",
         "button_style": "primary",
         "button_arrow": false,
-        "product": "",
+        "product": "buddh-a-3d-car-hanging",
         "image_ratio": "square",
         "show_three": true,
         "swipe_on_mobile": true,
         "margin_top": "l",
-        "margin_bottom": "l"
-      }
-    },
-    "slideshow_Vh7yr7": {
-      "type": "slideshow",
-      "blocks": {
-        "slideshow_item_AUJ8VU": {
-          "type": "slideshow_item",
-          "settings": {
-            "color_scheme": "",
-            "subheading": "Modern Essentials",
-            "heading": "Seasonal Essentials",
-            "heading_tag": "h1",
-            "text": "<p>Update your style with standout pieces from our latest collection. Bold, sleek, and versatile for every occasion.</p>",
-            "button_label": "Explore Campaign",
-            "button_link": "",
-            "button_style": "primary",
-            "button_arrow": false,
-            "overlay_opacity": 20,
-            "article": ""
-          }
-        },
-        "slideshow_item_K86eJL": {
-          "type": "slideshow_item",
-          "settings": {
-            "color_scheme": "",
-            "subheading": "Bold Statements",
-            "heading": "Fresh Finds",
-            "heading_tag": "h1",
-            "text": "<p>Discover the latest styles designed to elevate your look. Perfect for every moment, bold and versatile.</p>",
-            "button_label": "Explore Campaign",
-            "button_link": "",
-            "button_style": "primary",
-            "button_arrow": false,
-            "overlay_opacity": 20,
-            "article": ""
-          }
-        },
-        "slideshow_item_JHRrUf": {
-          "type": "slideshow_item",
-          "settings": {
-            "color_scheme": "",
-            "subheading": "Timeless Appeal",
-            "heading": "Timeless Staples",
-            "heading_tag": "h1",
-            "text": "<p>Refresh your wardrobe with classic pieces that never go out of style. Effortlessly bold, versatile, and ready for any occasion.</p>",
-            "button_label": "Explore Campaign",
-            "button_link": "",
-            "button_style": "primary",
-            "button_arrow": false,
-            "overlay_opacity": 20,
-            "article": ""
-          }
-        }
-      },
-      "block_order": [
-        "slideshow_item_AUJ8VU",
-        "slideshow_item_K86eJL",
-        "slideshow_item_JHRrUf"
-      ],
-      "settings": {
-        "section_header_type": "type1",
-        "enable_border_top": false,
-        "subheading": "",
-        "heading": "",
-        "heading_tag": "h2",
-        "description": "",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "button_arrow": false,
-        "section_layout": "container",
-        "section_alignment": "center",
-        "vertical_alignment": "center",
-        "container_size": "small",
-        "image_size": "small",
-        "transition_effect": "stretch",
-        "is_autoplay": true,
-        "show_pagination": true,
-        "slideshow_speed": 1.1,
-        "slideshow_delay": 3,
-        "margin_top": "no-indent",
-        "margin_bottom": "l"
-      }
-    },
-    "featured-blogs": {
-      "type": "featured-blogs",
-      "blocks": {
-        "block-1": {
-          "type": "article_block",
-          "settings": {
-            "article": ""
-          }
-        },
-        "block-2": {
-          "type": "article_block",
-          "settings": {
-            "article": ""
-          }
-        },
-        "block-3": {
-          "type": "article_block",
-          "settings": {
-            "article": ""
-          }
-        },
-        "article_block_bYPhmW": {
-          "type": "article_block",
-          "settings": {
-            "article": ""
-          }
-        },
-        "block-4": {
-          "type": "article_block",
-          "settings": {
-            "article": ""
-          }
-        }
-      },
-      "block_order": [
-        "block-1",
-        "block-2",
-        "block-3",
-        "article_block_bYPhmW",
-        "block-4"
-      ],
-      "settings": {
-        "section_header_type": "type2",
-        "show_arrows": true,
-        "enable_border_top": true,
-        "subheading": "Stories",
-        "heading": "Explore Our Stories",
-        "heading_tag": "h2",
-        "description": "",
-        "button_label": "Read All Stories",
-        "button_link": "",
-        "button_style": "primary",
-        "button_arrow": false,
-        "section_layout": "slider",
-        "slider_per_row": 3,
-        "is_autoplay": false,
-        "slider_speed": 1.1,
-        "slider_delay": 3,
-        "card_type": "overlay",
-        "hover_effect": "blur",
-        "show_image": true,
-        "show_tags": false,
-        "show_date": true,
-        "show_author": true,
-        "show_excerpt": true,
-        "show_btn": false,
-        "image_ratio": "portrait",
-        "image_fit": "cover",
-        "margin_top": "no-indent",
         "margin_bottom": "l"
       }
     }
@@ -883,8 +738,6 @@
     "ticker_with_content_QMbU7j",
     "products_with_image_fMQXfa",
     "parallax_gallery_6UexAm",
-    "featured_product_xFLRFH",
-    "slideshow_Vh7yr7",
-    "featured-blogs"
+    "featured_product_xFLRFH"
   ]
 }

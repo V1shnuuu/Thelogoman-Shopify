@@ -156,7 +156,7 @@
         "color_scheme": "",
         "show_logo": true,
         "logo": "shopify://shop_images/white-400x90_f84de8c0-c693-4b04-9025-46094ced9c91.png",
-        "logo_width": 290,
+        "logo_width": 430,
         "enable_language_selector": true,
         "enable_country_selector": true,
         "enable_follow_on_shop": false,
@@ -165,8 +165,8 @@
         "show_social": true,
         "copyright_show": true,
         "margin_top": "no-indent",
-        "padding_top": "m",
-        "padding_bottom": "m",
+        "padding_top": "s",
+        "padding_bottom": "s",
         "enable_border_top": true,
         "enable_border_bottom": true
       }
