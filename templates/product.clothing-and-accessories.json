@@ -12,15 +12,15 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "tags": {
-          "type": "tags",
-          "settings": {
-            "enable_tag_link": false
-          }
-        },
         "title": {
           "type": "title",
           "settings": {}
+        },
+        "tags": {
+          "type": "tags",
+          "settings": {
+            "enable_tag_link": true
+          }
         },
         "text": {
           "type": "text",
@@ -32,12 +32,6 @@
         "price": {
           "type": "price",
           "settings": {}
-        },
-        "description": {
-          "type": "description",
-          "settings": {
-            "description_heading": ""
-          }
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -148,11 +142,10 @@
         }
       },
       "block_order": [
-        "tags",
         "title",
+        "tags",
         "text",
         "price",
-        "description",
         "variant_picker",
         "buy_buttons",
         "about-1",
@@ -164,7 +157,7 @@
         "complementary_6kdrVb"
       ],
       "settings": {
-        "image_gallery_collage": "thumbnail_carousel",
+        "image_gallery_collage": "grid",
         "desktop_alignment": "left",
         "mobile_alignment": "after",
         "image_fit": "contain",
@@ -181,21 +174,21 @@
         "column_wDMikP": {
           "type": "column",
           "settings": {
-            "heading": "Visual Impact",
+            "heading": "ORIGINALITY",
             "heading_tag": "h5"
           }
         },
         "column_wAQxra": {
           "type": "column",
           "settings": {
-            "heading": "Visual Impact",
+            "heading": "CONFIDENCE",
             "heading_tag": "h5"
           }
         },
         "column_VezFRa": {
           "type": "column",
           "settings": {
-            "heading": "Visual Impact",
+            "heading": "CREATIVITY",
             "heading_tag": "h5"
           }
         }
@@ -209,11 +202,12 @@
         "blocks_type": "type2",
         "image_position": "image_left",
         "color_scheme": "background-3",
+        "image_first": "shopify://shop_images/ChatGPT_Image_May_21_2026_01_41_23_PM.png",
         "image_ratio": "landscape",
-        "subheading_secondary": "Intro",
-        "heading": "",
+        "subheading_secondary": "",
+        "heading": "Designed to Stand Out, Made to Represent You",
         "heading_tag": "h2",
-        "text": "<p>Use this space to give more details about what’s being shown in the image—this could be product specifications, an event highlight, or an introduction to a collection.</p>",
+        "text": "<p>Crafted with intention and driven by originality, every piece reflects bold identity and fearless creativity. Inspired by modern culture and expressive design, these creations are made to stand out while representing confidence, individuality, and powerful self-expression. More than accessories, they symbolize attitude, ambition, and the energy behind every unique story.<br/><br/><br/></p>",
         "margin_top": "no-indent",
         "margin_bottom": "l",
         "padding_top": "no-indent",
@@ -223,16 +217,17 @@
     "grid_banner_cYYmL7": {
       "type": "grid-banner",
       "blocks": {
-        "column_TgMGg7": {
+        "column_7cREq7": {
           "type": "column",
           "settings": {
-            "overlay_opacity": 4,
-            "heading": "Short Tagline",
-            "heading_size": "h3",
+            "image": "shopify://shop_images/ChatGPT_Image_May_14_2026_06_38_06_PM.png",
+            "overlay_opacity": 20,
+            "heading": "FAN BOY MOMENT",
+            "heading_size": "h2",
             "heading_tag": "h2",
-            "text": "<p>This is where you can describe what makes this banner important, guiding visitors to take action or explore more.</p>",
+            "text": "<p>Don’t miss out on the key pieces everyone’s talking about.</p>",
             "button_label": "Shop Now",
-            "button_link": "",
+            "button_link": "https://thelogoman-2.myshopify.com/products/thalapathy-legacy-unisex-tshirt",
             "button_style": "tertiary",
             "button_arrow": true,
             "column_start": 1,
@@ -241,16 +236,17 @@
             "row_end": "unset"
           }
         },
-        "column_xttm94": {
+        "column_TgMGg7": {
           "type": "column",
           "settings": {
-            "overlay_opacity": 0,
-            "heading": "Short Tagline",
-            "heading_size": "h3",
+            "image": "shopify://shop_images/ChatGPT_Image_May_14_2026_06_53_56_PM.png",
+            "overlay_opacity": 4,
+            "heading": "BUILT TO STAND OUT",
+            "heading_size": "h2",
             "heading_tag": "h2",
-            "text": "<p>This is where you can describe what makes this banner important, guiding visitors to take action or explore more.</p>",
+            "text": "<p>Lead the way with standout styles that define the season.</p>",
             "button_label": "Shop Now",
-            "button_link": "",
+            "button_link": "https://thelogoman-2.myshopify.com/products/direc-ted-by-robert-b-weide-unisex-t-shirt",
             "button_style": "tertiary",
             "button_arrow": true,
             "column_start": 2,
@@ -259,16 +255,17 @@
             "row_end": "unset"
           }
         },
-        "column_Xzd3eB": {
+        "column_xttm94": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_May_14_2026_06_52_51_PM.png",
             "overlay_opacity": 0,
-            "heading": "Short Tagline",
+            "heading": "<strong>Must-Have</strong>",
             "heading_size": "h3",
             "heading_tag": "h2",
-            "text": "<p>This is where you can describe what makes this banner important, guiding visitors to take action or explore more.</p>",
+            "text": "<p>Elevate your wardrobe with styles that stuns everyone at first glance.</p>",
             "button_label": "Shop Now",
-            "button_link": "",
+            "button_link": "https://thelogoman-2.myshopify.com/products/bottl-e-green-solid-unisex-cotton-t-shirt",
             "button_style": "tertiary",
             "button_arrow": true,
             "column_start": 3,
@@ -276,19 +273,39 @@
             "row_start": "unset",
             "row_end": "unset"
           }
+        },
+        "column_Xzd3eB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_May_14_2026_06_47_20_PM.png",
+            "overlay_opacity": 0,
+            "heading": "<strong>Trend Setters</strong>",
+            "heading_size": "h3",
+            "heading_tag": "h2",
+            "text": "<p>Own the pieces bringing fresh energy to everyday dressing.</p>",
+            "button_label": "Shop Now",
+            "button_link": "https://thelogoman-2.myshopify.com/products/karma-unisex-cotton-t-shirt",
+            "button_style": "tertiary",
+            "button_arrow": true,
+            "column_start": 4,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
         }
       },
       "block_order": [
+        "column_7cREq7",
         "column_TgMGg7",
         "column_xttm94",
         "column_Xzd3eB"
       ],
       "settings": {
-        "columns": 3,
+        "columns": 4,
         "color_scheme": "",
         "section_header_type": "type2",
         "enable_border_top": false,
-        "subheading": "Banners",
+        "subheading": "",
         "heading": "Explore Our Favorites",
         "heading_tag": "h2",
         "description": "",
@@ -327,6 +344,7 @@
     },
     "product-recommendations": {
       "type": "product-recommendations",
+      "disabled": true,
       "settings": {
         "products_to_show": 8,
         "per_row": 4,
@@ -353,7 +371,7 @@
         "show_vendor": false,
         "show_collection_name": false,
         "show_color_swatch": true,
-        "product_variant_type": "color",
+        "product_variant_type": "image",
         "show_desc": false,
         "margin_top": "no-indent",
         "margin_bottom": "l"
@@ -362,7 +380,17 @@
     "popular_products_YNhnAE": {
       "type": "popular-products",
       "settings": {
-        "product_list": [],
+        "product_list": [
+          "beast-unisex-cotton-full-hand-t-shirt",
+          "hope-unisex-cotton-t-shirt",
+          "ignor-e-negativity-unisex-t-shirt",
+          "karma-unisex-cotton-full-hand-t-shirt",
+          "direc-ted-by-robert-b-weide-unisex-t-shirt",
+          "bottl-e-green-solid-unisex-cotton-t-shirt",
+          "ignor-e-negativity-black-unisex-t-shirt",
+          "onion-red-solid-unisex-cotton-t-shirt",
+          "karma-unisex-cotton-t-shirt"
+        ],
         "per_row": 4,
         "section_header_type": "type2",
         "mobile_slider_grid_layout": "slider",
@@ -378,7 +406,7 @@
         "button_arrow": false,
         "autoplay": false,
         "stop_autoplay": true,
-        "show_arrows": false,
+        "show_arrows": true,
         "slideshow_speed": 1.1,
         "slideshow_delay": 3,
         "image_ratio": "portrait",

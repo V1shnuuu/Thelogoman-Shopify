@@ -21,8 +21,8 @@
       "type": "banner",
       "settings": {
         "full_width": true,
-        "image": "shopify://shop_images/ChatGPT_Image_May_19_2026_01_37_21_PM.png",
-        "image_size": "medium",
+        "image": "shopify://shop_images/ChatGPT_Image_May_20_2026_04_30_46_PM.png",
+        "image_size": "small",
         "overlay_opacity": 0,
         "margin_top": "no-indent",
         "margin_bottom": "no-indent"
@@ -90,11 +90,39 @@
     },
     "image_with_text_HacCWz": {
       "type": "image-with-text",
+      "blocks": {
+        "column_Ci9PUH": {
+          "type": "column",
+          "settings": {
+            "heading": "ORIGINALITY",
+            "heading_tag": "h5"
+          }
+        },
+        "column_Twme4G": {
+          "type": "column",
+          "settings": {
+            "heading": "CONFIDENCE",
+            "heading_tag": "h5"
+          }
+        },
+        "column_tKiWwq": {
+          "type": "column",
+          "settings": {
+            "heading": "CREATIVITY",
+            "heading_tag": "h5"
+          }
+        }
+      },
+      "block_order": [
+        "column_Ci9PUH",
+        "column_Twme4G",
+        "column_tKiWwq"
+      ],
       "settings": {
         "blocks_type": "type2",
         "image_position": "image_left",
         "color_scheme": "background-2",
-        "image_first": "shopify://shop_images/ChatGPT_Image_May_19_2026_01_04_47_PM.png",
+        "image_first": "shopify://shop_images/ChatGPT_Image_May_21_2026_01_41_23_PM.png",
         "image_ratio": "landscape",
         "subheading_secondary": "",
         "heading": "Designed to Stand Out, Made to Represent You",

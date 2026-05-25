@@ -25,13 +25,19 @@
       <!-- Product Image -->
       <div class="col-md-6 product-image-section">
         <div class="product-image-wrapper">
-          {% if product.featured_image %}
+          {%- if section.settings.custom_image != blank -%}
             <img 
-              src="{{ product.featured_image | img_url: '600x600' }}" 
-              alt="{{ product.title }}"
+              src="{{ section.settings.custom_image | img_url: '600x600' }}" 
+              alt="{{ product.title | default: 'Custom 3D Automotive Stickers' }}"
               class="img-fluid product-main-image"
             >
-          {% endif %}
+          {%- else -%}
+            <img 
+              src="{{ 'custom-3d-automotive-sticker.jpg' | asset_img_url: '600x600' }}" 
+              alt="{{ product.title | default: 'Custom 3D Automotive Stickers' }}"
+              class="img-fluid product-main-image"
+            >
+          {%- endif -%}
         </div>
       </div>
 
@@ -412,6 +418,12 @@
       "id": "product",
       "label": "Select Custom Product",
       "info": "Choose the product whose variants and details should be sold on this custom page."
+    },
+    {
+      "type": "image_picker",
+      "id": "custom_image",
+      "label": "Custom Page Image",
+      "info": "Select a custom image to override the default product image on this page."
     }
   ],
   "presets": [
