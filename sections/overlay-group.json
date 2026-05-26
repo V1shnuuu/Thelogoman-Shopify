@@ -16,18 +16,22 @@
       "blocks": {
         "popup_heading_8ngMyp": {
           "type": "popup_heading",
-          "settings": {}
+          "settings": {
+            "heading": "CRAFTED TO STAND OUT"
+          }
         },
         "popup_text_riKq4M": {
           "type": "popup_text",
           "settings": {
-            "text": ""
+            "text": "<p>Every product at THELOGOMAN is designed with originality, culture, and creativity in mind — from custom accessories to bold fashion pieces that make everyday style unforgettable.</p>"
           }
         },
         "subscribe_form_rLH6Dj": {
           "type": "subscribe_form",
           "settings": {
+            "placeholder_input": "E-mail",
             "show_email": true,
+            "button_label": "Subscribe",
             "button_action": "accept",
             "button_link": "",
             "button_style": "primary",

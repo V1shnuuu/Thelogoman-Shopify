@@ -31,16 +31,19 @@
         },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {}
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {
             "description_heading": ""
           }
         },
         "variant_picker": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_type": "button",
             "product_variant_type": "color",
@@ -63,7 +66,7 @@
             "show_gift_card_recipient": false,
             "notification_modal": true,
             "modal_button_label": "View Custom Page",
-            "heading": "Notificatio",
+            "heading": "Notification",
             "text": "<p>Kindly visit the Custom Page</p>",
             "button_label": "CUSTOM 3D CAR HANGING",
             "button_link": "https://thelogoman-2.myshopify.com/pages/custom-3d-car-hanging",
@@ -98,10 +101,12 @@
         },
         "inventory_yccUiU": {
           "type": "inventory",
+          "disabled": true,
           "settings": {}
         },
         "popup_4ce9fn": {
           "type": "popup",
+          "disabled": true,
           "settings": {
             "label": "Details",
             "heading": "Product Details",
@@ -307,6 +312,7 @@
         "column_xttm94",
         "column_Xzd3eB"
       ],
+      "disabled": true,
       "settings": {
         "columns": 4,
         "color_scheme": "",
@@ -330,6 +336,7 @@
     },
     "image-banner": {
       "type": "image-banner",
+      "disabled": true,
       "settings": {
         "section_layout": "full",
         "color_scheme": "",
@@ -351,6 +358,7 @@
     },
     "product-recommendations": {
       "type": "product-recommendations",
+      "disabled": true,
       "settings": {
         "products_to_show": 8,
         "per_row": 4,
@@ -386,11 +394,20 @@
     "popular_products_YNhnAE": {
       "type": "popular-products",
       "settings": {
-        "product_list": [],
+        "product_list": [
+          "batma-n-and-joker-radium-3d-car-hanging",
+          "money-heist-3d-car-hanging",
+          "groot-radium-3d-car-hanging",
+          "heise-nberg-3d-car-hanging",
+          "punis-her-black-3d-car-hanging",
+          "peaky-blinder-3d-car-hanging",
+          "punis-her-3d-car-hanging",
+          "buddh-a-3d-car-hanging"
+        ],
         "per_row": 4,
         "section_header_type": "type2",
         "mobile_slider_grid_layout": "slider",
-        "heading": "Top Picks Preview",
+        "heading": "Similar Recommendations",
         "heading_tag": "h2",
         "product_card_heading_tag": "h3",
         "subheading": "Bestsellers",

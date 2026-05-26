@@ -14,6 +14,7 @@
       "blocks": {
         "tags": {
           "type": "tags",
+          "disabled": true,
           "settings": {
             "enable_tag_link": false
           }
@@ -31,10 +32,12 @@
         },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {}
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {
             "description_heading": ""
           }
@@ -62,9 +65,9 @@
             "show_quantity": false,
             "show_gift_card_recipient": false,
             "notification_modal": true,
-            "modal_button_label": "Custom Page",
+            "modal_button_label": "View Custom Page",
             "heading": "Notification",
-            "text": "",
+            "text": "<p>Kindly Visit Our Custom Page</p>",
             "button_label": "CUSTOM 3D AUTOMOTIVE STICKER",
             "button_link": "https://thelogoman-2.myshopify.com/pages/custom-3d-automotive-stickers",
             "text_bottom": "",
@@ -98,10 +101,12 @@
         },
         "inventory_yccUiU": {
           "type": "inventory",
+          "disabled": true,
           "settings": {}
         },
         "popup_4ce9fn": {
           "type": "popup",
+          "disabled": true,
           "settings": {
             "label": "Details",
             "heading": "Product Details",
@@ -307,6 +312,7 @@
         "column_xttm94",
         "column_Xzd3eB"
       ],
+      "disabled": true,
       "settings": {
         "columns": 4,
         "color_scheme": "",
@@ -330,6 +336,7 @@
     },
     "image-banner": {
       "type": "image-banner",
+      "disabled": true,
       "settings": {
         "section_layout": "full",
         "color_scheme": "",
@@ -351,6 +358,7 @@
     },
     "product-recommendations": {
       "type": "product-recommendations",
+      "disabled": true,
       "settings": {
         "products_to_show": 8,
         "per_row": 4,
@@ -386,11 +394,21 @@
     "popular_products_YNhnAE": {
       "type": "popular-products",
       "settings": {
-        "product_list": [],
+        "product_list": [
+          "aveng-ers-3d-emblem-decal-car-bike-sticker",
+          "batma-n-mask-3d-car-bike-sticker",
+          "decep-ticon",
+          "black-panther-3d-engraved-decal-car-bike-sticker",
+          "csk",
+          "daine-se-3d-car-bike-sticker",
+          "darba-r-rajinikanth-face-3d-car-bike-sticker",
+          "batma-n",
+          "docto-r-strange"
+        ],
         "per_row": 4,
         "section_header_type": "type2",
         "mobile_slider_grid_layout": "slider",
-        "heading": "Top Picks Preview",
+        "heading": "Similar Recommendations",
         "heading_tag": "h2",
         "product_card_heading_tag": "h3",
         "subheading": "Bestsellers",

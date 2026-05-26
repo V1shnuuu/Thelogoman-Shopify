@@ -524,6 +524,7 @@
     },
     "ticker_with_content_QMbU7j": {
       "type": "ticker-with-content",
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "ticker_text": "EXCLUSIVE 10% OFF ON ORDERS ABOVE ₹1000",

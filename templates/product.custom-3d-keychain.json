@@ -12,25 +12,25 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
         "tags": {
           "type": "tags",
           "settings": {
             "enable_tag_link": false
           }
         },
-        "title": {
-          "type": "title",
-          "settings": {}
-        },
         "text": {
           "type": "text",
-          "disabled": true,
           "settings": {
             "text": ""
           }
         },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {}
         },
         "description": {
@@ -63,10 +63,10 @@
             "show_gift_card_recipient": false,
             "notification_modal": true,
             "modal_button_label": "View Custom Page",
-            "heading": "Notificatio",
-            "text": "<p>Kindly visit the Custom Page</p>",
-            "button_label": "CUSTOM 3D AUTOMOTIVE STICKER",
-            "button_link": "https://thelogoman-2.myshopify.com/pages/custom-3d-automotive-stickers",
+            "heading": "Notification",
+            "text": "<p>Kindly Visit Our Custom Page</p>",
+            "button_label": "CUSTOM 3D KEYCHAINS",
+            "button_link": "https://thelogoman-2.myshopify.com/pages/3d-keychain",
             "text_bottom": "",
             "button_label_2": "",
             "button_link_2": ""
@@ -98,10 +98,12 @@
         },
         "inventory_yccUiU": {
           "type": "inventory",
+          "disabled": true,
           "settings": {}
         },
         "popup_4ce9fn": {
           "type": "popup",
+          "disabled": true,
           "settings": {
             "label": "Details",
             "heading": "Product Details",
@@ -148,8 +150,8 @@
         }
       },
       "block_order": [
-        "tags",
         "title",
+        "tags",
         "text",
         "price",
         "description",
@@ -307,6 +309,7 @@
         "column_xttm94",
         "column_Xzd3eB"
       ],
+      "disabled": true,
       "settings": {
         "columns": 4,
         "color_scheme": "",
@@ -330,6 +333,7 @@
     },
     "image-banner": {
       "type": "image-banner",
+      "disabled": true,
       "settings": {
         "section_layout": "full",
         "color_scheme": "",
@@ -351,6 +355,7 @@
     },
     "product-recommendations": {
       "type": "product-recommendations",
+      "disabled": true,
       "settings": {
         "products_to_show": 8,
         "per_row": 4,
@@ -386,11 +391,20 @@
     "popular_products_YNhnAE": {
       "type": "popular-products",
       "settings": {
-        "product_list": [],
+        "product_list": [
+          "micha-el-jackson-3d-keychain",
+          "ms-dh-oni-3d-keychain",
+          "black-panther-3d-keychain",
+          "beast-vijay-3d-keychain",
+          "batma-n-3d-keychain",
+          "royal-enfield-3d-keychain",
+          "pokem-on-pikachu-3d-keychain",
+          "musta-che-3d-keychain"
+        ],
         "per_row": 4,
         "section_header_type": "type2",
         "mobile_slider_grid_layout": "slider",
-        "heading": "Top Picks Preview",
+        "heading": "Similar Recommendations",
         "heading_tag": "h2",
         "product_card_heading_tag": "h3",
         "subheading": "Bestsellers",
