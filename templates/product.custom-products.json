@@ -62,14 +62,14 @@
             "show_quantity": true,
             "show_gift_card_recipient": false,
             "notification_modal": true,
-            "modal_button_label": "View Custom Page",
-            "heading": "Notificatio",
-            "text": "<p>Kindly visit the Custom Page</p>",
-            "button_label": "CUSTOM 3D AUTOMOTIVE STICKER",
-            "button_link": "https://thelogoman-2.myshopify.com/pages/custom-3d-automotive-stickers",
+            "modal_button_label": "Notify me",
+            "heading": "Notification",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
             "text_bottom": "",
-            "button_label_2": "",
-            "button_link_2": ""
+            "button_label_2": "CUSTOM 3D KEYCHAIN",
+            "button_link_2": "https://thelogoman-2.myshopify.com/products/custom-3d-keychain?_pos=2&_psq=Custom&_ss=e&_v=1.0"
           }
         },
         "about-1": {
@@ -105,10 +105,10 @@
           "settings": {
             "label": "Details",
             "heading": "Product Details",
-            "text": "<p>Color:</p>{{ product.metafields.shopify[\"color-pattern\"] | metafield_tag: field: 'label' }}<p>Weight:  {{ product.metafields.custom.weight.value }}</p><p> </p><p>Dimension:  </p>{{ product.metafields.custom.dimension | metafield_tag }}{{ product.metafields.custom.details | metafield_tag }}<p></p>",
+            "text": "<p>Kindly visit our custom page</p>",
             "text_bottom": "",
-            "button_label": "",
-            "button_link": "",
+            "button_label": "Custom page",
+            "button_link": "https://thelogoman-2.myshopify.com/pages/3d-keychain",
             "button_style": "primary",
             "button_arrow": false,
             "secondary_button_enable": false,
