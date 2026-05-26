@@ -14,89 +14,35 @@
     "ticker_gccFEx": {
       "type": "ticker",
       "blocks": {
+        "media_block_H7MHPj": {
+          "type": "media_block",
+          "settings": {
+            "heading": "EXCLUSIVE 10% OFF ON ORDERS ABOVE ₹1000",
+            "ticker_link": "https://thelogoman-2.myshopify.com/collections/all",
+            "social_icon": "none"
+          }
+        },
+        "media_block_4NDw4Y": {
+          "type": "media_block",
+          "settings": {
+            "heading": "EXCLUSIVE 10% OFF ON ORDERS ABOVE ₹1000",
+            "ticker_link": "",
+            "social_icon": "none"
+          }
+        },
         "media_block_hD7y84": {
           "type": "media_block",
           "settings": {
-            "heading": "Promo Alert",
-            "ticker_link": "",
-            "social_icon": "none"
-          }
-        },
-        "media_block_tDbxBn": {
-          "type": "media_block",
-          "settings": {
-            "heading": "Promo Alert",
-            "ticker_link": "",
-            "social_icon": "none"
-          }
-        },
-        "media_block_dWGQfn": {
-          "type": "media_block",
-          "settings": {
-            "heading": "Promo Alert",
-            "ticker_link": "",
-            "social_icon": "none"
-          }
-        },
-        "media_block_zaF3he": {
-          "type": "media_block",
-          "settings": {
-            "heading": "Promo Alert",
-            "ticker_link": "",
-            "social_icon": "none"
-          }
-        },
-        "media_block_ijNGmY": {
-          "type": "media_block",
-          "settings": {
-            "heading": "Promo Alert",
-            "ticker_link": "",
-            "social_icon": "none"
-          }
-        },
-        "media_block_Wq96w9": {
-          "type": "media_block",
-          "settings": {
-            "heading": "Promo Alert",
-            "ticker_link": "",
-            "social_icon": "none"
-          }
-        },
-        "media_block_JECfaV": {
-          "type": "media_block",
-          "settings": {
-            "heading": "Promo Alert",
-            "ticker_link": "",
-            "social_icon": "none"
-          }
-        },
-        "media_block_KdbRM3": {
-          "type": "media_block",
-          "settings": {
-            "heading": "Promo Alert",
-            "ticker_link": "",
-            "social_icon": "none"
-          }
-        },
-        "media_block_8XEPUX": {
-          "type": "media_block",
-          "settings": {
-            "heading": "Promo Alert",
+            "heading": "EXCLUSIVE 10% OFF ON ORDERS ABOVE ₹1000",
             "ticker_link": "",
             "social_icon": "none"
           }
         }
       },
       "block_order": [
-        "media_block_hD7y84",
-        "media_block_tDbxBn",
-        "media_block_dWGQfn",
-        "media_block_zaF3he",
-        "media_block_ijNGmY",
-        "media_block_Wq96w9",
-        "media_block_JECfaV",
-        "media_block_KdbRM3",
-        "media_block_8XEPUX"
+        "media_block_H7MHPj",
+        "media_block_4NDw4Y",
+        "media_block_hD7y84"
       ],
       "settings": {
         "color_scheme": "background-2",

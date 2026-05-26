@@ -349,6 +349,7 @@
     },
     "image-banner": {
       "type": "image-banner",
+      "disabled": true,
       "settings": {
         "section_layout": "full",
         "color_scheme": "",

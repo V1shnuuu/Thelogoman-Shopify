@@ -296,7 +296,7 @@
       "settings": {
         "section_header_type": "type1",
         "enable_border_top": true,
-        "subheading": "COMMUNITY PICKS",
+        "subheading": "CUSTOMER PICKS",
         "heading": "<strong>YOUR STYLE, YOUR SIGNATURE</strong>",
         "heading_tag": "h2",
         "description": "",
@@ -356,6 +356,7 @@
         "collage_eJTHAm",
         "collage_GtdgDw"
       ],
+      "disabled": true,
       "settings": {
         "section_header_type": "type1",
         "enable_border_top": false,
@@ -493,10 +494,10 @@
         "per_row": 4,
         "section_header_type": "type2",
         "mobile_slider_grid_layout": "slider",
-        "heading": "Artful Jewelry for Extraordinary Looks",
+        "heading": "Icons Don’t Just Wear - They Carry the Culture.",
         "heading_tag": "h2",
         "product_card_heading_tag": "h3",
-        "subheading": "New Collection",
+        "subheading": "",
         "description": "",
         "enable_border_top": true,
         "button_label": "Shop All",
