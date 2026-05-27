@@ -57,16 +57,20 @@ class CartItems extends HTMLElement {
 		let isSuccess = false;
 
 		// Calculate active tier
+		let activeDiscountCode = null;
+
 		if (this.total >= t3) {
 			target = t3;
 			this.progress = 100;
 			isSuccess = true;
 			successMsg = shippingEl.dataset.tier3Free;
+			activeDiscountCode = shippingEl.dataset.tier3Code;
 		} else if (this.total >= t2) {
 			target = t3;
 			this.progress = (this.total / t3) * 100;
 			currentMsg = shippingEl.dataset.tier3Msg;
 			successMsg = shippingEl.dataset.tier2Free;
+			activeDiscountCode = shippingEl.dataset.tier2Code;
 		} else if (this.total >= t1 || this.hasExpensiveItem) {
 			target = t2;
 			this.progress = (this.total / t2) * 100;
@@ -82,6 +86,7 @@ class CartItems extends HTMLElement {
 
 		const defaultMsgEl = document.querySelector(".cart-shipping__message_default");
 		const successMsgEl = document.querySelector(".cart-shipping__message_success");
+		const ctaBtn = document.querySelector(".cart-shipping__cta-btn");
 
 		if (isSuccess) {
 			defaultMsgEl.classList.remove("active");
@@ -101,6 +106,35 @@ class CartItems extends HTMLElement {
 				successMsgEl.classList.remove("active");
 				defaultMsgEl.classList.add("active");
 			}
+		}
+
+		// Update CTA and Checkout forms
+		const cartForms = document.querySelectorAll('form[action="/cart"]');
+		
+		if (activeDiscountCode) {
+			const discountUrl = `/discount/${activeDiscountCode}?redirect=/checkout`;
+			
+			// Show CTA
+			if (ctaBtn) {
+				ctaBtn.innerText = `Apply ${activeDiscountCode.replace('AUTO', '')}% OFF`;
+				ctaBtn.href = discountUrl;
+				ctaBtn.classList.remove("hidden");
+			}
+
+			// Intercept Checkout Buttons
+			cartForms.forEach(form => {
+				form.action = discountUrl;
+			});
+		} else {
+			// Hide CTA
+			if (ctaBtn) {
+				ctaBtn.classList.add("hidden");
+			}
+			
+			// Reset Checkout Buttons
+			cartForms.forEach(form => {
+				form.action = "/cart";
+			});
 		}
 
 		document.querySelector(".cart-shipping__progress-current").style.width = this.progress + "%";

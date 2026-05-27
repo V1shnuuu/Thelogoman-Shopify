@@ -14,13 +14,20 @@
   data-tier2="{{ settings.min_spend_tier2 | times: 100.0 }}"
   data-tier2-msg="{{ settings.message_tier2 }}"
   data-tier2-free="{{ settings.message_tier2_free }}"
+  data-tier2-code="AUTO10"
   data-tier3="{{ settings.min_spend_tier3 | times: 100.0 }}"
   data-tier3-msg="{{ settings.message_tier3 }}"
-  data-tier3-free="{{ settings.message_tier3_free }}">
+  data-tier3-free="{{ settings.message_tier3_free }}"
+  data-tier3-code="AUTO15">
   
   <div class="cart-shipping__header">
-    <p class="cart-shipping__message cart-shipping__message_default small-font active"></p>
-    <p class="cart-shipping__message cart-shipping__message_success small-font"></p>
+    <div class="cart-shipping__message-wrapper">
+      <p class="cart-shipping__message cart-shipping__message_default small-font active"></p>
+      <p class="cart-shipping__message cart-shipping__message_success small-font"></p>
+    </div>
+    <div class="cart-shipping__cta-wrapper">
+      <a href="#" class="cart-shipping__cta-btn hidden">Apply Discount</a>
+    </div>
   </div>
   
 	<span class="cart-shipping__progress">

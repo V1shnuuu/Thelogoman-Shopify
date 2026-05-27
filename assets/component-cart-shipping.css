@@ -17,9 +17,49 @@
 }
 .cart-shipping__header {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.cart-shipping__message-wrapper {
+  display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  margin-bottom: 1.2rem;
+  flex: 1;
+}
+.cart-shipping__cta-wrapper {
+  display: flex;
+  flex-shrink: 0;
+}
+.cart-shipping__cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.8rem;
+  background: linear-gradient(135deg, #111, #333);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  animation: pulseCta 2s infinite;
+}
+.cart-shipping__cta-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  color: #fff;
+}
+.cart-shipping__cta-btn.hidden {
+  display: none;
+}
+@keyframes pulseCta {
+  0% { box-shadow: 0 0 0 0 rgba(17, 17, 17, 0.4); }
+  70% { box-shadow: 0 0 0 6px rgba(17, 17, 17, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(17, 17, 17, 0); }
 }
 .cart-shipping__message {
   display: none;
