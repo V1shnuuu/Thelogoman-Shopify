@@ -15,7 +15,9 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
-      "settings": {}
+      "settings": {
+        "default_per_row": "large"
+      }
     }
   },
   "order": [

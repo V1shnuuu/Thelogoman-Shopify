@@ -41,7 +41,7 @@
         "enable_filtering": true,
         "filter_type": "vertical",
         "enable_per_row_button": true,
-        "default_per_row": "small",
+        "default_per_row": "large",
         "enable_sorting": true,
         "image_filter_ratio": "4/5",
         "image_filter_fit": "cover",
