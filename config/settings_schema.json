@@ -1370,7 +1370,53 @@
 				"type": "textarea",
 				"id": "message_shipping_free",
 				"label": "t:settings_schema.cart.settings.message_shipping_free.label",
-				"default": "Congratulations! You qualify for free shipping."
+				"default": "🎉 FREE SHIPPING unlocked!"
+			},
+			{
+				"type": "header",
+				"content": "Tier 2 Rewards (10% OFF)"
+			},
+			{
+				"type": "textarea",
+				"id": "message_tier2",
+				"label": "Tier 2 Progress Message",
+				"info": "Use ||amount|| for the remaining amount.",
+				"default": "Add ||amount|| more to unlock 10% OFF"
+			},
+			{
+				"type": "text",
+				"id": "min_spend_tier2",
+				"label": "Tier 2 Minimum Spend",
+				"default": "2500"
+			},
+			{
+				"type": "textarea",
+				"id": "message_tier2_free",
+				"label": "Tier 2 Success Message",
+				"default": "🔥 10% OFF unlocked!"
+			},
+			{
+				"type": "header",
+				"content": "Tier 3 Rewards (15% OFF)"
+			},
+			{
+				"type": "textarea",
+				"id": "message_tier3",
+				"label": "Tier 3 Progress Message",
+				"info": "Use ||amount|| for the remaining amount.",
+				"default": "Add ||amount|| more to unlock 15% OFF"
+			},
+			{
+				"type": "text",
+				"id": "min_spend_tier3",
+				"label": "Tier 3 Minimum Spend",
+				"default": "5000"
+			},
+			{
+				"type": "textarea",
+				"id": "message_tier3_free",
+				"label": "Tier 3 Success Message",
+				"default": "🎉 15% OFF unlocked!"
 			}
 		]
 	},

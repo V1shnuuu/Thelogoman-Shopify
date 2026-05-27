@@ -36,41 +36,74 @@ class CartItems extends HTMLElement {
 	cartUpdateUnsubscriber = undefined;
 
 	cartShipping() {
+		const shippingEl = document.querySelector(".cart-shipping");
+		if (!shippingEl) return;
+
 		let progressPrev = getComputedStyle(
 			document.querySelector(".cart-shipping__progress-current")
 		).getPropertyValue("width");
 		document.documentElement.style.setProperty("--progress-prev", progressPrev);
 
-		this.total = document.querySelector(".cart-shipping").dataset.total;
-		this.hasExpensiveItem = document.querySelector(".cart-shipping").dataset.hasExpensiveItem === "true";
-		this.progress = (this.total / this.minTotal) * 100;
-		
-		if (this.progress > 100 || this.hasExpensiveItem) this.progress = 100;
+		this.total = parseFloat(shippingEl.dataset.total);
+		this.hasExpensiveItem = shippingEl.dataset.hasExpensiveItem === "true";
 
-		if (this.minTotal > this.total && !this.hasExpensiveItem) {
-			let amount = this.minTotal - this.total;
-			let message = document
-				.querySelector(".cart-shipping")
-				.dataset.message.replace("||amount||", formatMoney(amount));
-			document.querySelector(".cart-shipping__message_default").innerText =
-				message;
-			document
-				.querySelector(".cart-shipping__message_success")
-				.classList.remove("active");
-			document
-				.querySelector(".cart-shipping__message_default")
-				.classList.add("active");
+		const t1 = parseFloat(shippingEl.dataset.tier1);
+		const t2 = parseFloat(shippingEl.dataset.tier2);
+		const t3 = parseFloat(shippingEl.dataset.tier3);
+
+		let target = t1;
+		let currentMsg = shippingEl.dataset.tier1Msg;
+		let successMsg = "";
+		let isSuccess = false;
+
+		// Calculate active tier
+		if (this.total >= t3) {
+			target = t3;
+			this.progress = 100;
+			isSuccess = true;
+			successMsg = shippingEl.dataset.tier3Free;
+		} else if (this.total >= t2) {
+			target = t3;
+			this.progress = (this.total / t3) * 100;
+			currentMsg = shippingEl.dataset.tier3Msg;
+			successMsg = shippingEl.dataset.tier2Free;
+		} else if (this.total >= t1 || this.hasExpensiveItem) {
+			target = t2;
+			this.progress = (this.total / t2) * 100;
+			currentMsg = shippingEl.dataset.tier2Msg;
+			successMsg = shippingEl.dataset.tier1Free;
 		} else {
-			document
-				.querySelector(".cart-shipping__message_default")
-				.classList.remove("active");
-			document
-				.querySelector(".cart-shipping__message_success")
-				.classList.add("active");
+			target = t1;
+			this.progress = (this.total / t1) * 100;
+			currentMsg = shippingEl.dataset.tier1Msg;
 		}
 
-		document.querySelector(".cart-shipping__progress-current").style.width =
-			this.progress + "%";
+		if (this.progress > 100) this.progress = 100;
+
+		const defaultMsgEl = document.querySelector(".cart-shipping__message_default");
+		const successMsgEl = document.querySelector(".cart-shipping__message_success");
+
+		if (isSuccess) {
+			defaultMsgEl.classList.remove("active");
+			successMsgEl.classList.add("active");
+			successMsgEl.innerText = successMsg;
+		} else {
+			let amount = target - this.total;
+			let formattedAmount = formatMoney(Math.max(amount, 0));
+			defaultMsgEl.innerText = currentMsg.replace("||amount||", formattedAmount);
+			
+			if (successMsg) {
+				// We unlocked a previous tier, but are aiming for next
+				successMsgEl.innerText = successMsg;
+				successMsgEl.classList.add("active");
+				defaultMsgEl.classList.add("active");
+			} else {
+				successMsgEl.classList.remove("active");
+				defaultMsgEl.classList.add("active");
+			}
+		}
+
+		document.querySelector(".cart-shipping__progress-current").style.width = this.progress + "%";
 	}
 
 	connectedCallback() {
