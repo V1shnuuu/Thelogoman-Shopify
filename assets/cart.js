@@ -109,7 +109,7 @@ class CartItems extends HTMLElement {
 		}
 
 		// Update CTA and Checkout forms
-		const cartForms = document.querySelectorAll('form[action="/cart"]');
+		const cartForms = document.querySelectorAll('form[action="/cart"], form.cart');
 		
 		if (activeDiscountCode) {
 			const discountUrl = `/discount/${activeDiscountCode}?redirect=/checkout`;
@@ -121,9 +121,21 @@ class CartItems extends HTMLElement {
 				ctaBtn.classList.remove("hidden");
 			}
 
-			// Intercept Checkout Buttons
+			// Intercept Checkout Buttons via Hidden Input (avoids 404 on POST)
 			cartForms.forEach(form => {
-				form.action = discountUrl;
+				let discountInput = form.querySelector('input[name="discount"]');
+				if (!discountInput) {
+					discountInput = document.createElement("input");
+					discountInput.type = "hidden";
+					discountInput.name = "discount";
+					form.appendChild(discountInput);
+				}
+				discountInput.value = activeDiscountCode;
+				
+				// Ensure action remains the standard post endpoint
+				if (form.getAttribute('action') && form.getAttribute('action').includes('/discount/')) {
+					form.action = "/cart";
+				}
 			});
 		} else {
 			// Hide CTA
@@ -133,7 +145,12 @@ class CartItems extends HTMLElement {
 			
 			// Reset Checkout Buttons
 			cartForms.forEach(form => {
-				form.action = "/cart";
+				let discountInput = form.querySelector('input[name="discount"]');
+				if (discountInput) discountInput.remove();
+				
+				if (form.getAttribute('action') && form.getAttribute('action').includes('/discount/')) {
+					form.action = "/cart";
+				}
 			});
 		}
 
