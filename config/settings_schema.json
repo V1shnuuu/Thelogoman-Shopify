@@ -1364,7 +1364,7 @@
 				"id": "min_spend",
 				"label": "t:settings_schema.cart.settings.min_spend.label",
 				"info": "t:settings_schema.cart.settings.min_spend.info",
-				"default": "100"
+				"default": "1000"
 			},
 			{
 				"type": "textarea",

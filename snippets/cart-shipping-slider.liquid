@@ -1,5 +1,12 @@
-<div class="cart-shipping" data-min-spend="{{ settings.min_spend | times: 100.0 }}" data-total="{{ cart.total_price }}"
-  data-message = " {{ settings.message_shipping }}">
+{%- assign has_expensive_item = false -%}
+{%- assign min_spend_value = settings.min_spend | times: 100.0 -%}
+{%- for item in cart.items -%}
+  {%- if item.price >= min_spend_value -%}
+    {%- assign has_expensive_item = true -%}
+  {%- endif -%}
+{%- endfor -%}
+<div class="cart-shipping" data-min-spend="{{ settings.min_spend | times: 100.0 }}" data-total="{{ cart.total_price }}" data-has-expensive-item="{{ has_expensive_item }}"
+  data-message=" {{ settings.message_shipping }}">
   <p class="cart-shipping__message cart-shipping__message_default small-font active"></p>
   <p class="cart-shipping__message cart-shipping__message_success small-font">
     {{ settings.message_shipping_free }}
