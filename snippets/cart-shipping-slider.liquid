@@ -6,7 +6,7 @@
   {%- endif -%}
 {%- endfor -%}
 <div class="cart-shipping dynamic-rewards" 
-  data-total="{{ cart.total_price }}" 
+  data-total="{{ cart.original_total_price }}" 
   data-has-expensive-item="{{ has_expensive_item }}"
   data-tier1="{{ settings.min_spend | times: 100.0 }}"
   data-tier1-msg="{{ settings.message_shipping }}"
