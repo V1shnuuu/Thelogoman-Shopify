@@ -112,7 +112,7 @@ class CartItems extends HTMLElement {
 		const cartForms = document.querySelectorAll('form[action="/cart"], form.cart');
 		
 		if (activeDiscountCode) {
-			const discountUrl = `/discount/${activeDiscountCode}?redirect=/checkout`;
+			const discountUrl = `/checkout?discount=${activeDiscountCode}`;
 			
 			// Show CTA
 			if (ctaBtn) {
