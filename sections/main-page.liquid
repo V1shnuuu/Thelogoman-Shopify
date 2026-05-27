@@ -20,14 +20,16 @@
 
 <div class="container section-{{ section.id }}-padding">
 	<div class="page-header">
-		<div class="page-header__inner">
-			<h1 class="main-page-title page-title title--page h3" style="margin-bottom: 5px;">
+		<div class="page-header__inner" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+			<h1 class="main-page-title page-title title--page h3" style="margin-bottom: 5px; text-align: center;">
 				{{ page.title | escape }}
 			</h1>
 			{%- if page.handle contains 'custom' or page.handle contains 'keychain' or page.handle contains 'hanging' or page.handle contains 'automotive' or page.handle contains 'mobile' or page.handle contains 'clothing' -%}
-				<p class="custom-corporate-subtitle" style="text-align: center; color: rgb(var(--color-foreground)); opacity: 0.8; font-size: 1.4rem; margin-top: 5px; font-weight: 400;">
-					For bulk & corporate orders, connect with us at <a href="mailto:crew@thelogoman.in" style="color: rgb(var(--color-foreground)); text-decoration: underline; font-weight: 500;">crew@thelogoman.in</a>
-				</p>
+				<div class="custom-corporate-subtitle" style="margin-top: 10px; display: inline-block;">
+					<span style="background: rgba(255, 255, 255, 0.05); padding: 8px 18px; border-radius: 8px; font-size: 1.5rem; color: #ccc; border: 1px solid rgba(255, 255, 255, 0.1); display: inline-block;">
+						For bulk & corporate orders, connect with us at <a href="mailto:crew@thelogoman.in" style="color: #fff; font-weight: 600; text-decoration: underline; text-underline-offset: 3px;">crew@thelogoman.in</a>
+					</span>
+				</div>
 			{%- endif -%}
 		</div>
 	</div>
