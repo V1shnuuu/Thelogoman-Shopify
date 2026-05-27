@@ -17,7 +17,7 @@
         "media_block_H7MHPj": {
           "type": "media_block",
           "settings": {
-            "heading": "EXCLUSIVE 10% OFF ON ORDERS ABOVE ₹1000",
+            "heading": "EXCLUSIVE 10% off for orders between ₹2500 – ₹5000",
             "ticker_link": "",
             "social_icon": "none"
           }
@@ -25,7 +25,7 @@
         "media_block_4NDw4Y": {
           "type": "media_block",
           "settings": {
-            "heading": "EXCLUSIVE 10% OFF ON ORDERS ABOVE ₹1000",
+            "heading": "Signature Savings: 15% Off on Orders ₹5000 – ₹10000",
             "ticker_link": "",
             "social_icon": "none"
           }
@@ -33,7 +33,7 @@
         "media_block_hD7y84": {
           "type": "media_block",
           "settings": {
-            "heading": "EXCLUSIVE 10% OFF ON ORDERS ABOVE ₹1000",
+            "heading": "Special 5% Off on All Prepaid Orders",
             "ticker_link": "",
             "social_icon": "none"
           }
@@ -82,7 +82,7 @@
         "footer-4": {
           "type": "store_info",
           "settings": {
-            "text": "<p><strong>Address: </strong>59/32, Old Amaranjipuram,Royapuram, Chennai - 600013.<br/><strong>Mail Id:</strong> crew@thelogoman.in<br/><strong>Contact no:</strong> +91-7222000177</p>",
+            "text": "<p><strong>Address:  </strong>101, 5th Ln, opposite to N4 Beach, Market Farm, Tondiarpet, Chennai, Tamil Nadu 600081<br/><strong>Mail Id:</strong> crew@thelogoman.in<br/><strong>Contact no:</strong> +91-7222000177</p>",
             "alignment": "left"
           }
         },

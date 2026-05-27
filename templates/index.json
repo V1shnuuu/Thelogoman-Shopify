@@ -134,19 +134,19 @@
         "column_RDrBeq": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/ChatGPT_Image_May_13_2026_06_18_35_PM.png"
+            "image": "shopify://shop_images/ChatGPT_Image_May_27_2026_09_22_04_PM.png"
           }
         },
         "column_X33KEp": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/ChatGPT_Image_May_14_2026_01_15_14_PM.png"
+            "image": "shopify://shop_images/ChatGPT_Image_May_27_2026_09_22_21_PM.png"
           }
         },
         "column_dWQ3yk": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/ChatGPT_Image_May_13_2026_06_18_21_PM.png"
+            "image": "shopify://shop_images/ChatGPT_Image_May_27_2026_09_22_14_PM.png"
           }
         }
       },
@@ -524,10 +524,9 @@
     },
     "ticker_with_content_QMbU7j": {
       "type": "ticker-with-content",
-      "disabled": true,
       "settings": {
         "color_scheme": "",
-        "ticker_text": "EXCLUSIVE 10% OFF ON ORDERS ABOVE ₹1000",
+        "ticker_text": "Free shipping for all orders above ₹1000",
         "heading_size": "h1",
         "ticker_speed": 7.5,
         "subheading": "Big Sale",
@@ -711,7 +710,7 @@
       "settings": {
         "section_header_type": "type2",
         "enable_border_top": true,
-        "subheading": "Featured Product",
+        "subheading": "",
         "heading": "Explore Our Featured Product",
         "heading_tag": "h2",
         "description": "",

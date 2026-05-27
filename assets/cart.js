@@ -42,10 +42,12 @@ class CartItems extends HTMLElement {
 		document.documentElement.style.setProperty("--progress-prev", progressPrev);
 
 		this.total = document.querySelector(".cart-shipping").dataset.total;
+		this.hasExpensiveItem = document.querySelector(".cart-shipping").dataset.hasExpensiveItem === "true";
 		this.progress = (this.total / this.minTotal) * 100;
-		if (this.progress > 100) this.progress = 100;
+		
+		if (this.progress > 100 || this.hasExpensiveItem) this.progress = 100;
 
-		if (this.minTotal > this.total) {
+		if (this.minTotal > this.total && !this.hasExpensiveItem) {
 			let amount = this.minTotal - this.total;
 			let message = document
 				.querySelector(".cart-shipping")

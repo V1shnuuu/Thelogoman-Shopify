@@ -37,11 +37,22 @@
     "popular-products": {
       "type": "popular-products",
       "settings": {
-        "product_list": [],
+        "product_list": [
+          "aveng-ers-black-and-gold-3d-mobile-phone-sticker",
+          "karma",
+          "trans-former-silver-3d-mobile-phone-sticker",
+          "wolf-3d-emblem-decal-mobile-phone-sticker-logo",
+          "thug-life-silver-3d-emblem-decal-mobile-phone-sticker-logo",
+          "micha-el-jackson-3d-keychain",
+          "buddh-a-3d-car-hanging"
+        ],
         "per_row": 4,
         "section_header_type": "type2",
+        "mobile_slider_grid_layout": "slider",
         "heading": "Recommended",
-        "subheading": "Recommended",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "subheading": "",
         "description": "",
         "enable_border_top": true,
         "button_label": "Shop All",
